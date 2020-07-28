@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+{% load static %}
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>MA Nuurus Salaam</title>
+        <link rel="icon" type="image/x-icon" href="{% static 'assets/img/LogoMANuurusSalaam.jpg' %}" />
+
+
+
+        <!-- Font Awesome icons (free version) 5.13.0-->
+        <script src="{% static 'js/all.js' %}"></script>
+
+        <!-- Google fonts fonts.googleapis.com family=Montserrat:400,700 , Droid+Serif, Roboto+Slab -->
+        <link href="{% static 'css/montserrat.css' %}" rel="stylesheet" />
+        <link href="{% static 'css/droidserif.css' %}" rel="stylesheet" />
+        <link href="{% static 'css/robotoslab.css' %}" rel="stylesheet" />
+
+                
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" />
+
+
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="{% static 'assets/img/LogoMANuurusSalaam.png' %}" alt="" />MA Nuurus Salaam</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ml-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ml-auto">
+                    	<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#profil">Profil</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Kegiatan</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#guru">Tenaga Kependidikan</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Kontak</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <!-- Masthead-->
+        <header>
+        	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        		<ol class="carousel-indicators">
+        			<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        			<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        			<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        		</ol>
+        		<div class="carousel-inner" role="listbox">
+        			<!-- Slide One - Set the background image for this slide in the line below -->
+        			<div class="carousel-item active" >
+        				<img class="d-block w-100" src="{% static 'assets/img/header-bg.jpg' %}" alt="First slide">
+        				<div class="carousel-caption d-none d-md-block">
+        					<h2 class="display-4">MA Nuurus Salaam</h2>
+        					<p class="lead">Madrasah Aliyah Nuurus Salaam.</p>
+        				</div>
+        			</div>
+        			<!-- Slide Two - Set the background image for this slide in the line below -->
+        			<div class="carousel-item ">
+        				<img class="d-block w-100" src="{% static 'assets/img/header-bg2.jpg' %}" alt="Second slide">
+        				<div class="carousel-caption d-none d-md-block">
+        					<h2 class="display-4">Second Slide</h2>
+        					<p class="lead">This is a description for the second slide.</p>
+        				</div>
+        			</div>
+        			<!-- Slide Three - Set the background image for this slide in the line below -->
+        			<div class="carousel-item" style="background-image: url('https://source.unsplash.com/szFUQoyvrxM/1920x1080')">
+        				<div class="carousel-caption d-none d-md-block">
+        					<h2 class="display-4">Third Slide</h2>
+        					<p class="lead">This is a description for the third slide.</p>
+        				</div>
+        			</div>
+        		</div>
+        		<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        			<span class="sr-only">Previous</span>
+        		</a>
+        		<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+        			<span class="sr-only">Next</span>
+        		</a>
+        	</div>
+        </header>
+
+        <!-- Profil-->
+        <section class="page-section" id="profil">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Profil</h2>
+                    
+                </div>
+                <ul class="timeline">
+                    <li>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="{% static 'assets/img/about/1.jpg' %}" alt="" /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>Sejarah</h4>
+                                
+                            </div>
+                            <div class="timeline-body">
+                            	<p class="text-muted">
+                            		Dalam Rangka Ikut Serta Dalam Mencerdaskan Anak Bangsa Agar Menjadi Generasi Penerus Yang Berwawasan Luas Dan Baik Dari Segi Kejiwaan Maupun Fisik Yang Meliputi Moral Dan Nilai-Nilai Agama Dan Melihat Fenomena Perubahan Sikap Alumni Sekolah Lanjutan Pertama Yang Sudah Mendapatkan Pendidikan Agama Tatkala Masuk Ke Lanjutan Atas, Atau Sekolah Yang Bukan Berbasis Keagamaan Maka Seluruh Pembina, Pengawas Dan Pengurus Yayasan Nuurus Salaam Insani Memandang Sangat Diperlukan Didirikannya Sebuah Sekolah Lanjutan Tingkat Atas Berbasis Keagamaan Di Wilayah Desa Cipatik.  
+                            	</p>
+                            	<p class="text-muted">
+                            		Sehingga Berdasarkan Rapat Pleno Yang Dilaksanakan Pada Hari Jumat, Tanggal 1 Maret 2013 Maka Seluruh Pembina, Pengawas Dan Pengurus Yayasan Nuurus Salaam Insani Menyetujui Didirikannya Madrasah Aliyah (MA) Nuurus Salaam Yang Terletak Di Atas Tanah Yayasan Seluas Kurang Lebih 550m2 Di Desa Cipatik Kecamatan Cihampelas Kabupaten Bandung Barat.
+                            	</p>
+                            	<p class="text-muted">
+                            		Pada Tahun Ajaran 2013/2014 MA Nuurus Salaam Membuka Pendidikan Bidang Program PAI (Pendidikan Agama Islam), Program IPA (Ilmu Pengetahuan Alam), Program IPS (Ilmu Pengetahuan Sosial) Dan Program Bahasa Yang Pendidikannya Berada Dibawah naungan Kementerian Agama Kabupaten Bandung Barat 
+                            	</p>
+                            
+
+                        </div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="{% static 'assets/img/about/2.jpg' %}" alt="" /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>Visi Dan Misi</h4>
+                                
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">“Terwujudnya Madrasah Yang Kompetitif Dalam Ilmu Pengetahuan Berbasis Teknologi, Keterampilan Dan Pesantren”</p></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="{% static 'assets/img/about/3.jpg' %}" alt="" /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>Struktur Organisasi</h4>
+                                
+                            </div>
+                            
+                        </div>
+                    </li>
+                  
+                </ul>
+            </div>
+        </section>
+        
+
+
+        <!-- Portfolio Grid-->
+        <section class="page-section bg-light" id="portfolio">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Kesiswaan</h2>
+                    <h3 class="section-subheading text-muted">Selain OSIS Sebagai Induk Kegiatan Ektrakurikuler Di Sekolah, Kegiatan Ektrakurikuler Lainnya Adalah:</h3>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="{% static 'assets/img/portfolio/01-thumbnail.jpg' %}" alt="" />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Pramuka</div>
+                                <div class="portfolio-caption-subheading text-muted">Kesiswaan</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="{% static 'assets/img/portfolio/02-thumbnail.jpg' %}" alt="" />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Paskibra</div>
+                                <div class="portfolio-caption-subheading text-muted">Kesiswaan</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="{% static 'assets/img/portfolio/03-thumbnail.jpg' %}" alt="" />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Panahan</div>
+                                <div class="portfolio-caption-subheading text-muted">Kesiswaan</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4 ">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="{% static 'assets/img/portfolio/04-thumbnail.jpg' %}" alt="" />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Rohis</div>
+                                <div class="portfolio-caption-subheading text-muted">Kesiswaan</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4 ">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="{% static 'assets/img/portfolio/05-thumbnail.jpg' %}" alt="" />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">English Club</div>
+                                <div class="portfolio-caption-subheading text-muted">Kesiswaan</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4 ">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="{% static 'assets/img/portfolio/06-thumbnail.jpg' %}" alt="" />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Tenis Meja</div>
+                                <div class="portfolio-caption-subheading text-muted">Kesiswaan</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4 ">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal7">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="{% static 'assets/img/portfolio/07-thumbnail.jpg' %}" alt="" />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Futsal</div>
+                                <div class="portfolio-caption-subheading text-muted">Kesiswaan</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-sm-6 mb-4 ">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal8">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="{% static 'assets/img/kegiatan/komputer-1.jpg' %}" alt="" />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Keterampilan Komputer</div>
+                                <div class="portfolio-caption-subheading text-muted">Kegiatan</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4 ">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal9">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="{% static 'assets/img/kegiatan/menjahit-1.jpg' %}" alt="" />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Keterampilan Menjahit</div>
+                                <div class="portfolio-caption-subheading text-muted">Kegiatan</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4 ">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal10">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="{% static 'assets/img/kegiatan/ksm-1.jpg' %}" alt="" />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Kompetisi Sains</div>
+                                <div class="portfolio-caption-subheading text-muted">Kegiatan</div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Team-->
+        <section class="page-section bg-light" id="guru">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Guru Dan Tenaga Kependidikan</h2>
+                    <h3 class="section-subheading text-muted">Guru Dan Tenaga Kependidikan Madrasah Aliyah Nuurus Salaam</h3>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle" src="{% static 'assets/img/team/nurul.jpg' %}" alt="" />
+                            <h4>Nurul Hidayah, S.Si</h4>
+                            <p class="text-muted">Kepala Madrasah</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle" src="{% static 'assets/img/team/dini.jpg' %}" alt="" />
+                            <h4>Dini Hanipah, S.Psi</h4>
+                            <p class="text-muted">Bendahara, Guru BK</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle" src="{% static 'assets/img/team/dikta.jpg' %}" alt="" />
+                            <h4>Dikta Oktavianto, S.Pd</h4>
+                            <p class="text-muted">Penjaskes</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p></div>
+                </div>
+            </div>
+        </section>
+        <!-- Clients-->
+        <div class="py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 my-3">
+                        <a href="#!"><img class="img-fluid d-block mx-auto" src="{% static 'assets/img/logos/envato.jpg' %}" alt="" /></a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 my-3">
+                        <a href="#!"><img class="img-fluid d-block mx-auto" src="{% static 'assets/img/logos/designmodo.jpg' %}" alt="" /></a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 my-3">
+                        <a href="#!"><img class="img-fluid d-block mx-auto" src="{% static 'assets/img/logos/themeforest.jpg' %}" alt="" /></a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 my-3">
+                        <a href="#!"><img class="img-fluid d-block mx-auto" src="{% static 'assets/img/logos/creative-market.jpg' %}" alt="" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Contact-->
+        <section class="page-section" id="contact">
+
+
+        	<div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Hubungi Kami</h2>
+
+                </div>
+                <form id="contactForm" name="sentMessage" novalidate="novalidate">
+                    <div class="row align-items-stretch mb-5">
+                        <div class="col-md-6">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.6095553523623!2d107.5078947953203!3d-6.9371801577720085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68ef61559a96dd%3A0x9ca58f4d983fada8!2sMA%20NUURUS%20SALAAM!5e0!3m2!1sen!2sid!4v1595960040570!5m2!1sen!2sid" width="550" height="350" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                        </div>
+                        <div class="col-md-6">
+
+                        	<h4 class="pt-2 section-heading">Alamat</h4>
+                        	<i class="fas fa-globe" style="color:#FFF"></i> 
+                        	<h7 class="section-heading">Jl. Raya Cipatik No 16 Kp. Jayamekar RT 04 RW 08 Desa Cipatik Kecamatan Cihampelas Kabupaten Bandung Barat</h7><br>
+                        	<h4 class="pt-2 section-heading">Telepon</h4>
+                        	<i class="fas fa-phone" style="color:#FFF"></i> 
+                        	<h7 class="section-heading" href="tel:+">(022)86671313</h7><br>
+                        	
+                        	<h4 class="pt-2 section-heading">Email</h4>
+                        	<i class="fa fa-envelope" style="color:#FFF"></i> 
+                        	<a class="section-heading" >nuurussalaam16@gmail.com</a>
+                        	<br>
+                        </div>
+                    </div>
+                    
+                </form>
+            </div>
+        </section>
+
+
+
+
+
+
+        <!-- Footer-->
+        <footer class="footer py-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 text-lg-left">Copyright © MA Nuurus Salaam 2020</div>
+                    <div class="col-lg-4 my-3 my-lg-0">
+                        <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/manuurussalaam"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/nuurussalaam.official/"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="https://www.youtube.com/channel/UCt9yQekA8sfMXssubJx0OrA"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <div class="col-lg-4 text-lg-right">
+                        <a class="mr-3" href="#!">Login</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Portfolio Modals-->
+        <!-- Modal 1-->
+        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-dismiss="modal"><img src="{% static 'assets/img/close-icon.svg' %}" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project Details Go Here-->
+                                    <h2 class="text-uppercase">Project Name</h2>
+                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                    <img class="img-fluid d-block mx-auto" src="{% static 'assets/img/portfolio/01-full.jpg' %}" alt="" />
+                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <ul class="list-inline">
+                                        <li>Date: January 2020</li>
+                                        <li>Client: Threads</li>
+                                        <li>Category: Illustration</li>
+                                    </ul>
+                                    <button class="btn btn-primary" data-dismiss="modal" type="button">
+                                        <i class="fas fa-times mr-1"></i>
+                                        Close Project
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal 2-->
+        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-dismiss="modal"><img src="{% static 'assets/img/close-icon.svg' %}" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project Details Go Here-->
+                                    <h2 class="text-uppercase">Project Name</h2>
+                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                    <img class="img-fluid d-block mx-auto" src="{% static 'assets/img/portfolio/02-full.jpg' %}" alt="" />
+                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <ul class="list-inline">
+                                        <li>Date: January 2020</li>
+                                        <li>Client: Explore</li>
+                                        <li>Category: Graphic Design</li>
+                                    </ul>
+                                    <button class="btn btn-primary" data-dismiss="modal" type="button">
+                                        <i class="fas fa-times mr-1"></i>
+                                        Close Project
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal 3-->
+        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-dismiss="modal"><img src="{% static 'assets/img/close-icon.svg' %}" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project Details Go Here-->
+                                    <h2 class="text-uppercase">Project Name</h2>
+                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                    <img class="img-fluid d-block mx-auto" src="{% static 'assets/img/portfolio/03-full.jpg' %}" alt="" />
+                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <ul class="list-inline">
+                                        <li>Date: January 2020</li>
+                                        <li>Client: Finish</li>
+                                        <li>Category: Identity</li>
+                                    </ul>
+                                    <button class="btn btn-primary" data-dismiss="modal" type="button">
+                                        <i class="fas fa-times mr-1"></i>
+                                        Close Project
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal 4-->
+        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-dismiss="modal"><img src="{% static 'assets/img/close-icon.svg' %}" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project Details Go Here-->
+                                    <h2 class="text-uppercase">Project Name</h2>
+                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                    <img class="img-fluid d-block mx-auto" src="{% static 'assets/img/portfolio/04-full.jpg' %}" alt="" />
+                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <ul class="list-inline">
+                                        <li>Date: January 2020</li>
+                                        <li>Client: Lines</li>
+                                        <li>Category: Branding</li>
+                                    </ul>
+                                    <button class="btn btn-primary" data-dismiss="modal" type="button">
+                                        <i class="fas fa-times mr-1"></i>
+                                        Close Project
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal 5-->
+        <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-dismiss="modal"><img src="{% static 'assets/img/close-icon.svg' %}" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project Details Go Here-->
+                                    <h2 class="text-uppercase">Project Name</h2>
+                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                    <img class="img-fluid d-block mx-auto" src="{% static 'assets/img/portfolio/05-full.jpg' %}" alt="" />
+                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <ul class="list-inline">
+                                        <li>Date: January 2020</li>
+                                        <li>Client: Southwest</li>
+                                        <li>Category: Website Design</li>
+                                    </ul>
+                                    <button class="btn btn-primary" data-dismiss="modal" type="button">
+                                        <i class="fas fa-times mr-1"></i>
+                                        Close Project
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal 6-->
+        <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-dismiss="modal"><img src="{% static 'assets/img/close-icon.svg' %}" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project Details Go Here-->
+                                    <h2 class="text-uppercase">Project Name</h2>
+                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                    <img class="img-fluid d-block mx-auto" src="{% static 'assets/img/portfolio/06-full.jpg' %}" alt="" />
+                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <ul class="list-inline">
+                                        <li>Date: January 2020</li>
+                                        <li>Client: Window</li>
+                                        <li>Category: Photography</li>
+                                    </ul>
+                                    <button class="btn btn-primary" data-dismiss="modal" type="button">
+                                        <i class="fas fa-times mr-1"></i>
+                                        Close Project
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <!-- Bootstrap core JS 3.5.1/jquery.min.js dan 4.5.0/js/bootstrap.bundle.min.js -->
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+        <script src="{% static 'js/jquery.slim.min.js' %}"></script>
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+        
+        <!-- Third party plugin JS jquery-easing/1.4.1-->
+        <script src="{% static 'js/jquery.easing.min.js' %}"></script>
+        
+
+
+        <!-- Contact form JS-->
+        <script src="{% static 'assets/mail/jqBootstrapValidation.js' %}"></script>
+        <script src="{% static 'assets/mail/contact_me.js' %}"></script>
+        <!-- Core theme JS-->
+        <script src="{% static 'js/scripts.js' %}"></script>
+    </body>
+</html>
