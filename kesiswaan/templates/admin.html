@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% include "snippets/header.html" %} 
+  {% include "snippets/styles.html" %} 
+  
+  
+</head>
+
+<body id="page-top">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    {% include "snippets/sidebar.html" %}
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+        {% include "snippets/topbar.html" %}
+        <!-- Begin Page Content -->
+        {% block content %}{% endblock %}
+        <!-- /.container-fluid -->
+      </div>
+      <!-- End of Main Content -->
+
+      {% include "snippets/footer.html" %}
+    </div>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  {% include "snippets/scrolltopbutton.html" %}
+  {% include "snippets/logoutmodal.html" %}
+  {% include "snippets/scripts.html" %}   
+
+</body>
+
+</html>
