@@ -26,3 +26,20 @@ def indexKeuangan(request):
 		'nbar': 'keuangan',
 	}
 	return render(request, 'keuangan/index.html', context)
+
+
+@login_required(login_url='/login/')
+def pemasukan(request):
+	context = {
+		"page_title":"Daftar Pemasukan",
+		'nbar': 'pemasukan',
+	}
+	return render(request, 'keuangan/pemasukan.html', context)
+
+@login_required(login_url='/login/')
+def pengeluaran(request):
+	context = {
+		"page_title":"Daftar Pengeluaran",
+		'nbar': 'pengeluaran',
+	}
+	return render(request, 'keuangan/pengeluaran.html', context)

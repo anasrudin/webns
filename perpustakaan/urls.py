@@ -8,4 +8,10 @@ from . import views
 app_name = 'perpustakaan'
 urlpatterns = [
     path('', views.index, name='indexPerpustakaan'),
+    path('transaksi/', views.transaksiPeminjaman, name='transaksiPeminjaman'),
+    path('katalog/', views.katalogPeminjaman, name='katalogPeminjaman'),
+    path('pinjam/', views.peminjaman, name='peminjamanBuku'),
+    path('kembali/', views.pengembalian, name='pengembalianBuku'),
+    path('denda/', views.daftarDenda, name='daftarDenda'),
 ]
+

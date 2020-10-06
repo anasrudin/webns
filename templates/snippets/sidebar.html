@@ -20,20 +20,36 @@
       <hr class="sidebar-divider my-0">
 
       <!-- Nav Item - Dashboard -->
-      <li class="nav-item {% if nbar == 'dashboard' %}active{% endif %}">
-        <a class="nav-link" href="{% url 'perpustakaan:indexPerpustakaan' %}">
+      <li class="nav-item ">
+        <a class="nav-link " href="{% url 'perpustakaan:indexPerpustakaan' %}" data-toggle="collapse" data-target="#collapsePerpus" aria-expanded="true" aria-controls="collapsePerpus">
           <i class="fas fa-fw fa-book"></i>
           <span>Perpustakaan</span></a>
+          <div id="collapsePerpus" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Management perpustakaan:</h6>
+            <a class="collapse-item {% if nbar == 'transaksiPeminjaman' %}active{% endif %}" href="{% url 'perpustakaan:transaksiPeminjaman' %}" class="no-collapsable">Transaksi Peminjaman</a>
+            <a class="collapse-item" href="{% url 'perpustakaan:katalogPeminjaman' %}">Katalog Buku</a>
+            <a class="collapse-item" href="{% url 'perpustakaan:peminjamanBuku' %}">Peminjaman</a>
+            <a class="collapse-item" href="{% url 'perpustakaan:pengembalianBuku' %}">Pengembalian</a>
+            <a class="collapse-item" href="{% url 'perpustakaan:daftarDenda' %}">Daftar Denda</a>
+          </div>
+        </div>
       </li>
-      <li class="nav-item {% if nbar == 'dashboard' %}active{% endif %}">
-        <a class="nav-link" href="{% url 'kesiswaan:indexKesiswaan' %}">
+      <li class="nav-item"  >
+        <a class="nav-link" href="{% url 'kesiswaan:indexKesiswaan' %}" data-toggle="collapse" data-target="#collapseKesiswaan" aria-expanded="true" aria-controls="collapseKesiswaan">
           <i class="fas fa-fw fa-graduation-cap"></i>
           <span>Kesiswaan</span></a>
       </li>
-      <li class="nav-item {% if nbar == 'dashboard' %}active{% endif %}">
-        <a class="nav-link" href="{% url 'keuangan:indexKeuangan' %}">
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'keuangan:indexKeuangan' %}" data-toggle="collapse" data-target="#collapseKeuangan" aria-expanded="true" aria-controls="collapseKeuangan">
           <i class="fas fa-fw fa-calculator"></i>
           <span>Keuangan</span></a>
+          <div id="collapseKeuangan" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Management Keuangan:</h6>
+            <a class="collapse-item" href="{% url 'keuangan:pemasukan' %}" class="no-collapsable">Pemasukan</a>
+            <a class="collapse-item" href="{% url 'keuangan:pengeluaran' %}">Pengeluaran</a>
+          </div>
       </li>
 
 
