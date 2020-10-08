@@ -29,17 +29,17 @@ def indexKeuangan(request):
 
 
 @login_required(login_url='/login/')
-def pemasukan(request):
+def inputTransaksi(request):
 	context = {
-		"page_title":"Daftar Pemasukan",
-		'nbar': 'pemasukan',
+		"page_title":"Input Transaksi",
+		'nbar': 'inputTransaksi',
 	}
-	return render(request, 'keuangan/pemasukan.html', context)
+	return render(request, 'keuangan/inputTransaksi.html', context)
 
 @login_required(login_url='/login/')
-def pengeluaran(request):
+def daftarTransaksi(request):
 	context = {
-		"page_title":"Daftar Pengeluaran",
-		'nbar': 'pengeluaran',
+		"page_title":"Daftar Transaksi",
+		'nbar': 'daftarTransaksi',
 	}
-	return render(request, 'keuangan/pengeluaran.html', context)
+	return render(request, 'keuangan/daftarTransaksi.html', context)

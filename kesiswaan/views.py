@@ -26,3 +26,27 @@ def indexKesiswaan(request):
 		'nbar': 'kesiswaan',
 	}
 	return render(request, 'kesiswaan/index.html', context)
+
+@login_required(login_url='/login/')
+def masterData(request):
+	context = {
+		"page_title":"Master Data",
+		'nbar': 'masterData',
+	}
+	return render(request, 'kesiswaan/master.html', context)
+
+@login_required(login_url='/login/')
+def pelanggaran(request):
+	context = {
+		"page_title":"Pelanggaran Siswa",
+		'nbar': 'pelanggaran',
+	}
+	return render(request, 'kesiswaan/pelanggaran.html', context)
+
+@login_required(login_url='/login/')
+def kehadiran(request):
+	context = {
+		"page_title":"Kehadiran Siswa",
+		'nbar': 'kehadiran',
+	}
+	return render(request, 'kesiswaan/kehadiran.html', context)

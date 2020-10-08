@@ -39,6 +39,13 @@
         <a class="nav-link" href="{% url 'kesiswaan:indexKesiswaan' %}" data-toggle="collapse" data-target="#collapseKesiswaan" aria-expanded="true" aria-controls="collapseKesiswaan">
           <i class="fas fa-fw fa-graduation-cap"></i>
           <span>Kesiswaan</span></a>
+          <div id="collapseKesiswaan" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Management Kesiswaan:</h6>
+            <a class="collapse-item" href="{% url 'kesiswaan:masterData' %}" class="no-collapsable">Master Data</a>
+            <a class="collapse-item" href="{% url 'kesiswaan:pelanggaran' %}">Pelanggaran Siswa</a>
+            <a class="collapse-item" href="{% url 'kesiswaan:kehadiran' %}">Kehadiran Siswa</a>
+          </div>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="{% url 'keuangan:indexKeuangan' %}" data-toggle="collapse" data-target="#collapseKeuangan" aria-expanded="true" aria-controls="collapseKeuangan">
@@ -47,8 +54,8 @@
           <div id="collapseKeuangan" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Management Keuangan:</h6>
-            <a class="collapse-item" href="{% url 'keuangan:pemasukan' %}" class="no-collapsable">Pemasukan</a>
-            <a class="collapse-item" href="{% url 'keuangan:pengeluaran' %}">Pengeluaran</a>
+            <a class="collapse-item" href="{% url 'keuangan:inputTransaksi' %}" class="no-collapsable">Input Transaksi</a>
+            <a class="collapse-item" href="{% url 'keuangan:daftarTransaksi' %}">Daftar Transaksi</a>
           </div>
       </li>
 
