@@ -11,4 +11,5 @@ urlpatterns = [
     path('masterData/', views.masterData, name='masterData'),
     path('pelanggaran/', views.pelanggaran, name='pelanggaran'),
     path('kehadiran/', views.kehadiran, name='kehadiran'),
+    path('daftarSiswa/', views.daftarSiswa, name='daftarSiswa'),
 ]

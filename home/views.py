@@ -10,3 +10,12 @@ def index(request):
     }
     
     return render(request, 'index.html', context)
+
+
+def formpsb(request):
+    # return HttpResponse("Hello, world. You're at the polls index.")
+    context = {
+    'page_title': 'Formpsb',
+    }
+    
+    return render(request, 'home/formpsb.html', context)

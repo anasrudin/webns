@@ -1,0 +1,416 @@
+
+<!DOCTYPE html>
+<html>
+
+{% load static %}
+
+
+<head>
+  <meta charset="utf-8">
+  <title>Pendaftaran MA NS</title>
+  <!-- Mobile Specific Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- Font-->
+  <link href="{% static 'css/opensans-font.css' %}" rel="stylesheet" />
+  <link href="{% static 'css/roboto-font.css' %}" rel="stylesheet" /> 
+  <link rel="stylesheet" type="text/css" href="{% static 'fonts/material-design-iconic-font/css/material-design-iconic-font.min.css' %}">
+
+    <!-- datepicker -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/jquery-ui.min.css' %} ">
+
+  <!-- Main Style Css -->
+  <link rel="stylesheet" href="{% static 'css/form-style.css' %}" />
+  
+
+
+</head>
+<body>
+  <div class="page-content" style="background-image: url({% static 'assets/img/header-bg.jpg' %}" )">
+    <div class="wizard-v4-content">
+      <div class="wizard-form">
+        <div class="wizard-header">
+          <h3 class="heading">Formulir Online Pendaftaran Peserta Didik Baru</h3>
+          <p>Silahkan Isi semua formulir sebelum menuju langkah selanjutnya</p>
+        </div>
+            <form class="form-register" action="#" method="post">
+              <div id="form-total">
+                <!-- SECTION 1 -->
+                  <h2>
+                    <span class="step-icon"><i class="zmdi zmdi-account"></i></span>
+                    <span class="step-text">Data Pribadi</span>
+                  </h2>
+                  <section>
+                      <div class="inner">
+                        <h3>Data Pribadi:</h3>
+                        <p>Isi Data Pribadi Anda Dengan Lengkap Dan Benar. Tanda Bintang *) Wajib Diisi</p>
+
+                <div class="form-row">
+                  <div class="form-holder form-holder-2">
+                    <label class="form-row-inner">
+                      <input type="text" class="form-control" id="nama" name="nama" required>
+                      <span class="label">Nama Lengkap *</span>
+                        <span class="border"></span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-holder form-holder-2">
+                    <label class="form-row-inner">
+                      <input type="text" class="form-control" id="nisn" name="nisn" required>
+                      <span class="label">NISN</span>
+                        <span class="border"></span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-holder form-holder-2">
+                    <label class="form-row-inner">
+                      <input type="text" class="form-control" id="nik" name="nik" required>
+                      <span class="label">NIK *</span>
+                        <span class="border"></span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-holder form-holder-2">
+                    <label class="form-row-inner">
+                      <input type="text" class="form-control" id="tempatlahir" name="tempatlahir" required>
+                      <span class="label">Tempat Lahir *</span>
+                        <span class="border"></span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-holder form-holder-2">
+                    <label class="form-row-inner">
+                      <input type="text" class="form-control" id="tanggallahir" name="tanggallahir" required>
+                      <span class="label">Tanggal Lahir *</span>
+                        <span class="border"></span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-holder form-holder-2">
+                    <label class="form-row-inner">
+                      <input type="text" class="form-control" id="kelamin" name="kelamin" required>
+                      <span class="label">Jenis Kelamin *</span>
+                        <span class="border"></span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-holder form-holder-2">
+                    <label class="form-row-inner">
+                      <input type="text" class="form-control" id="hobi" name="hobi" required>
+                      <span class="label">Hobi *</span>
+                        <span class="border"></span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-holder form-holder-2">
+                    <label class="form-row-inner">
+                      <input type="text" class="form-control" id="citacita" name="citacita" required>
+                      <span class="label">Cita-Cita *</span>
+                        <span class="border"></span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-holder form-holder-2">
+                    <label class="form-row-inner">
+                      <input type="text" class="form-control" id="anakke" name="anakke" required>
+                      <span class="label">Anak Ke- *</span>
+                        <span class="border"></span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-holder form-holder-2">
+                    <label class="form-row-inner">
+                      <input type="text" class="form-control" id="jumlahsaudara" name="jumlahsaudara" required>
+                      <span class="label">Jumlah Saudara *</span>
+                        <span class="border"></span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-holder form-holder-2">
+                    <label class="form-row-inner">
+                      <input type="text" class="form-control" id="sekolahasal" name="sekolahasal" required>
+                      <span class="label">Madrasah / Sekolah Asal *</span>
+                        <span class="border"></span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-holder form-holder-2">
+                    <label class="form-row-inner">
+                      <input type="text" class="form-control" id="hp" name="hp" required>
+                      <span class="label">No HP / WA *</span>
+                        <span class="border"></span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-holder form-holder-2">
+                    <label class="form-row-inner">
+                      <input type="text" class="form-control" id="email" name="email" required>
+                      <span class="label">Email</span>
+                        <span class="border"></span>
+                    </label>
+                  </div>
+                </div>
+
+
+
+              </div>
+
+
+
+
+                  </section>
+            <!-- SECTION 2 -->
+                  <h2>
+                    <span class="step-icon"><i class="zmdi zmdi-lock"></i></span>
+                    <span class="step-text">Madrasah / Sekolah</span>
+                  </h2>
+                  <section>
+                      <div class="inner">
+                        <h3>Data Madrasah / Sekolah Sebelumnya</h3>
+                        <p>Isi Dengan Data Madrasah / Sekolah Sebelumnya Dengan Lengkap Dan Benar. Tanda Bintang *) Wajib Diisi</p>
+
+                
+
+                <div class="form-row">
+                  <div class="form-holder form-holder-2">
+                    <label class="form-row-inner">
+                      <input type="text" name="jenislembaga" id="jenislembaga" class="form-control" required>
+                      <span class="label">Jenis Lembaga *</span>
+                        <span class="border"></span>
+                    </label>
+                  </div>
+                </div>
+
+
+                  <div class="form-row">
+                  <div class="form-holder form-holder-2">
+                    <label class="form-row-inner">
+                      <input type="text" name="statuslembaga" id="statuslembaga" class="form-control" required>
+                      <span class="label">Status Lembaga *</span>
+                        <span class="border"></span>
+                    </label>
+                  </div>
+                </div>              
+
+
+                  <div class="form-row">
+                  <div class="form-holder form-holder-2">
+                    <label class="form-row-inner">
+                      <input type="text" name="npsn" id="npsn" class="form-control" required onfocus="this.placeholder = 'NPSN terdapat pada ijazah. Kosongkan jika tidak tahu'"
+onblur="this.placeholder = ''">
+                      <span class="label">NPSN</span>
+                        <span class="border"></span>
+                    </label>
+                  </div>
+                </div>
+
+                  <div class="form-row">
+                  <div class="form-holder form-holder-2">
+                    <label class="form-row-inner">
+                      <input type="text" name="noijazah" id="noijazah" class="form-control" required onfocus="this.placeholder = 'Terdapat pada paling bawah ijazah. Kosongkan jika belum mempunyai Ijazah'"
+onblur="this.placeholder = ''">
+                      <span class="label">Nomor Seri Ijazah</span>
+                        <span class="border"></span>
+                    </label>
+                  </div>
+                </div>
+
+
+
+
+
+
+
+       
+              </div>
+                  </section>
+                  <!-- SECTION 3 -->
+                  <h2>
+                    <span class="step-icon"><i class="zmdi zmdi-receipt"></i></span>
+                    <span class="step-text">Tempat Tinggal</span>
+
+                  </h2>
+                  <section>
+                      <div class="inner">
+                        <h3>Data Tempat Tinggal</h3>
+                        <p>Isi Data Tempat Dimana Anda Tinggal Dengan Lengkap Dan Benar. Tanda Bintang *) Wajib Diisi</p>
+
+                  <div class="form-row">
+                  <div class="form-holder form-holder-2">
+                    <label for="tempattinggal" class="special-label">Jenis tempat tinggal: *</label>
+                    <select name="tempattinggal" id="tempattinggal" >
+                      <option value="0" disabled selected>Pilih dimana anda tinggal sekarang</option>
+                      <option value="1">Tinggal dengan Orang Tua /Wali</option>
+                      <option value="2">Ikut Saudara/Kerabat</option>
+                      <option value="3">Asrama Madrasah</option>
+                      <option value="4">Kontrak/Kost</option>
+                      <option value="5">Asrama Pesantren</option>
+                      <option value="6">Panti Asuhan</option>
+                      <option value="7">Rumah Singgah</option>
+                      <option value="8">Lainnya</option>
+                    </select>
+                  </div>
+                </div>
+
+
+
+                  <div class="form-row">
+                  <div class="form-holder form-holder-2">
+                    <label class="form-row-inner">
+                      <input type="text" name="alamat" id="alamat" class="form-control" required onfocus="this.placeholder = 'Nama jalan / Kp / RT ? RW. Misal . Jl. Raya Cipatik no 16'"
+onblur="this.placeholder = ''">
+                      <span class="label">Alamat *</span>
+                        <span class="border"></span>
+                    </label>
+                  </div>
+                </div>
+
+
+                  <div class="form-row">
+                  <div class="form-holder form-holder-2">
+                    <label class="form-row-inner">
+                      <input type="text" name="provinsi" id="provinsi" class="form-control" required onfocus="this.placeholder = 'Provinsi, misal : Jawa Barat'"
+onblur="this.placeholder = ''">
+                      <span class="label">Provinsi *</span>
+                        <span class="border"></span>
+                    </label>
+                  </div>
+                </div>
+
+
+                  <div class="form-row">
+                  <div class="form-holder form-holder-2">
+                    <label class="form-row-inner">
+                      <input type="text" name="kabupatenkota" id="kabupatenkota" class="form-control" required onfocus="this.placeholder = 'Kabupaten / Kota, misal : Bandung Barat'"
+onblur="this.placeholder = ''">
+                      <span class="label">Kabupaten / Kota *</span>
+                        <span class="border"></span>
+                    </label>
+                  </div>
+                </div>
+
+
+                  <div class="form-row">
+                  <div class="form-holder form-holder-2">
+                    <label class="form-row-inner">
+                      <input type="text" name="desa" id="desa" class="form-control" required onfocus="this.placeholder = 'Desa, misal : Cipatik'"
+onblur="this.placeholder = ''">
+                      <span class="label">Desa *</span>
+                        <span class="border"></span>
+                    </label>
+                  </div>
+                </div>
+
+                  <div class="form-row">
+                  <div class="form-holder form-holder-2">
+                    <label class="form-row-inner">
+                      <input type="text" name="kodepos" id="kodepos" class="form-control" required onfocus="this.placeholder = 'Kode Pos lihat di kartu keluarga paling atas, misal : 40767'"
+onblur="this.placeholder = ''">
+                      <span class="label">Kode Pos</span>
+                        <span class="border"></span>
+                    </label>
+                  </div>
+                </div>
+
+                  <div class="form-row">
+                  <div class="form-holder form-holder-2">
+                    <label for="jaraktempattinggal" class="special-label">Jarak tempat tinggal: *</label>
+                    <select name="jaraktempattinggal" id="jaraktempattinggal" >
+                      <option value="0" disabled selected>Jarak tempat tinggal dengan MA Nuurus Salaam</option>
+                      <option value="1">Kurang dari 5 KM </option>
+                      <option value="2">Antara 5 - 10 KM </option>
+                      <option value="3">Antara 11 - 20 KM</option>
+                      <option value="4">Antara 21 - 30 KM</option>
+                      <option value="5">Lebih dari 30 KM</option>
+                    </select>
+                  </div>
+                </div>
+
+
+                  <div class="form-row">
+                  <div class="form-holder form-holder-2">
+                    <label for="transportasi" class="special-label">Transportasi Yang Dipakai: *</label>
+                    <select name="transportasi" id="transportasi" >
+                      <option value="0" disabled selected>Transportasi Yang Dipakai:</option>
+                      <option value="1">Jalan Kaki </option>
+                      <option value="2">Sepeda</option>
+                      <option value="3">Sepeda Motor</option>
+                      <option value="4">Mobil Pribadi</option>
+                      <option value="5">Antar Jemput Sekolah</option>
+                      <option value="6">Angkutan Umum</option>
+                      <option value="7">Perahu/Sampan</option>
+                      <option value="8">Lainnya</option>
+                    </select>
+                  </div>
+                </div>
+
+                
+                  </section>
+
+
+
+
+
+                  <!-- SECTION 4 -->
+                  <h2>
+                    <span class="step-icon"><i class="zmdi zmdi-money"></i></span>
+                    <span class="step-text">Financing</span>
+                  </h2>
+                  <section>
+                      <div class="inner">
+                        <h3>Financing Information</h3>
+                        <div class="form-row">
+                  <div class="form-holder form-holder-2">
+                    <select name="inventory" id="inventory">
+                      <option value="Buy Inventory" disabled selected>Buy Inventory</option>
+                      <option value="Yes">Yes</option>
+                      <option value="No">No</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div id="checkbox">
+                    <span>Do you have existing business financing?: </span>
+                    <input type="checkbox" name="vehicle1" value="Yes"> Yes
+                      <input type="checkbox" name="vehicle2" value="No"> No
+                  </div>
+                </div>
+                <h4>Existing Balance </h4>
+
+                  </section>
+              </div>
+            </form>
+      </div>
+    </div>
+  </div>
+  
+  
+  <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+  <script src="{% static 'js/jquery.steps.js' %}"></script>
+  <script src="{% static 'js/jquery-ui.min.js' %}"></script>
+  <script src="{% static 'js/main-form.js' %}"></script>
+</body>
+</html>

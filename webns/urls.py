@@ -30,5 +30,6 @@ urlpatterns = [
     path('kesiswaan/', include('kesiswaan.urls', namespace='kesiswaan')),    
     path('keuangan/', include('keuangan.urls', namespace='keuangan')),
     path('perpustakaan/', include('perpustakaan.urls', namespace='perpustakaan')),
+    path('psb/', include('psb.urls', namespace='psb')),
     path('admin/', admin.site.urls),
 ]

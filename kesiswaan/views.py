@@ -50,3 +50,12 @@ def kehadiran(request):
 		'nbar': 'kehadiran',
 	}
 	return render(request, 'kesiswaan/kehadiran.html', context)
+
+
+@login_required(login_url='/login/')
+def daftarSiswa(request):
+	context = {
+		"page_title":"Daftar Siswa",
+		'nbar': 'daftarSiswa',
+	}
+	return render(request, 'kesiswaan/daftarSiswa.html', context)
