@@ -84,50 +84,70 @@
                   </div>
                 </div>
 
+
+
                 <div class="form-row">
                   <div class="form-holder form-holder-2">
-                    <label class="form-row-inner">
-                      <input type="text" class="form-control" id="tanggallahir" name="tanggallahir" required>
-                      <span class="label">Tanggal Lahir *</span>
-                      <span class="border"></span>
-                    </label>
+                    <label for="tanggallahir" class="special-label">Tanggal Lahir *</label>
+                    <div class="col-10">
+                      <input class="form-control" type="date" value="2011-08-19" id="tanggallahir" name="tanggallahir">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-holder form-holder-2">
+                    <label for="kelamin" class="special-label">Jenis Kelamin *</label>
+                    <select name="kelamin" id="kelamin" >
+                      <option value="0" disabled selected>Jenis Kelamin</option>
+                      <option value="1">Laki-Laki</option>
+                      <option value="2">Perempuan</option>
+                    </select>
+                  </div>
+                </div>
+
+
+                <div class="form-row">
+                  <div class="form-holder form-holder-2">
+                    <label for="hobi" class="special-label">Hobi *</label>
+                    <select name="hobi" id="hobi" >
+                      <option value="0" disabled selected>Hobi</option>
+                      <option value="1">Olahraga</option>
+                      <option value="2">Kesenian</option>
+                      <option value="3">Membaca</option>
+                      <option value="4">Menulis</option> 
+                      <option value="5">Jalan-Jalan</option>
+                      <option value="6">Lainnya</option>                                                                                       
+                    </select>
+                  </div>
+                </div>
+
+
+
+
+                <div class="form-row">
+                  <div class="form-holder form-holder-2">
+                    <label for="citacita" class="special-label">Cita-Cita *</label>
+                    <select name="citacita" id="citacita" >
+                      <option value="0" disabled selected>Cita-Cita</option>
+                      <option value="1">PNS</option>
+                      <option value="2">TNI/Porli</option>
+                      <option value="3">Guru/Dosen</option>
+                      <option value="4">Dokter</option> 
+                      <option value="5">Politikus</option>
+                      <option value="6">Wiraswasta</option>                
+                      <option value="7">Seniman/Artis</option> 
+                      <option value="8">Ilmuan</option>
+                      <option value="9">Agamawan</option>     
+                      <option value="10">Lainnya</option>     
+                    </select>
                   </div>
                 </div>
 
                 <div class="form-row">
                   <div class="form-holder form-holder-2">
                     <label class="form-row-inner">
-                      <input type="text" class="form-control" id="kelamin" name="kelamin" required>
-                      <span class="label">Jenis Kelamin *</span>
-                      <span class="border"></span>
-                    </label>
-                  </div>
-                </div>
-
-                <div class="form-row">
-                  <div class="form-holder form-holder-2">
-                    <label class="form-row-inner">
-                      <input type="text" class="form-control" id="hobi" name="hobi" required>
-                      <span class="label">Hobi *</span>
-                      <span class="border"></span>
-                    </label>
-                  </div>
-                </div>
-
-                <div class="form-row">
-                  <div class="form-holder form-holder-2">
-                    <label class="form-row-inner">
-                      <input type="text" class="form-control" id="citacita" name="citacita" required>
-                      <span class="label">Cita-Cita *</span>
-                      <span class="border"></span>
-                    </label>
-                  </div>
-                </div>
-
-                <div class="form-row">
-                  <div class="form-holder form-holder-2">
-                    <label class="form-row-inner">
-                      <input type="text" class="form-control" id="anakke" name="anakke" required>
+                      <input type="number" class="form-control" id="anakke" name="anakke" required>
                       <span class="label">Anak Ke- *</span>
                       <span class="border"></span>
                     </label>
@@ -137,7 +157,7 @@
                 <div class="form-row">
                   <div class="form-holder form-holder-2">
                     <label class="form-row-inner">
-                      <input type="text" class="form-control" id="jumlahsaudara" name="jumlahsaudara" required>
+                      <input type="number" class="form-control" id="jumlahsaudara" name="jumlahsaudara" required>
                       <span class="label">Jumlah Saudara *</span>
                       <span class="border"></span>
                     </label>
@@ -157,7 +177,7 @@
                 <div class="form-row">
                   <div class="form-holder form-holder-2">
                     <label class="form-row-inner">
-                      <input type="text" class="form-control" id="hp" name="hp" required>
+                      <input type="tel" class="form-control" id="hp" name="hp" required>
                       <span class="label">No HP / WA *</span>
                       <span class="border"></span>
                     </label>
@@ -196,24 +216,33 @@
 
                 <div class="form-row">
                   <div class="form-holder form-holder-2">
-                    <label class="form-row-inner">
-                      <input type="text" name="jenislembaga" id="jenislembaga" class="form-control" required>
-                      <span class="label">Jenis Lembaga *</span>
-                      <span class="border"></span>
-                    </label>
+                    <label for="jenislembaga" class="special-label">Jenis Lembaga *</label>
+                    <select name="jenislembaga" id="jenislembaga" >
+                      <option value="0" disabled selected>Jenis Lembaga</option>
+                      <option value="1">SMP</option>
+                      <option value="2">MTs</option>
+                      <option value="3">Paket C</option>
+                      <option value="4">Lainnya</option> 
+                      
+                    </select>
                   </div>
                 </div>
 
 
+
+
+
                 <div class="form-row">
                   <div class="form-holder form-holder-2">
-                    <label class="form-row-inner">
-                      <input type="text" name="statuslembaga" id="statuslembaga" class="form-control" required>
-                      <span class="label">Status Lembaga *</span>
-                      <span class="border"></span>
-                    </label>
+                    <label for="statuslembaga" class="special-label">Status Lembaga *</label>
+                    <select name="statuslembaga" id="statuslembaga" >
+                      <option value="0" disabled selected>Status Lembaga</option>
+                      <option value="1">Negri</option>
+                      <option value="2">Swasta</option>
+                    </select>
                   </div>
-                </div>              
+                </div>
+                
 
 
                 <div class="form-row">
@@ -307,6 +336,17 @@
                       <input type="text" name="kabupatenkota" id="kabupatenkota" class="form-control" required onfocus="this.placeholder = 'Kabupaten / Kota, misal : Bandung Barat'"
                       onblur="this.placeholder = ''">
                       <span class="label">Kabupaten / Kota *</span>
+                      <span class="border"></span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-holder form-holder-2">
+                    <label class="form-row-inner">
+                      <input type="text" name="kecamatan" id="kecamatan" class="form-control" required onfocus="this.placeholder = 'Kecamatan, misal : Cihampelas'"
+                      onblur="this.placeholder = ''">
+                      <span class="label">Kecamatan *</span>
                       <span class="border"></span>
                     </label>
                   </div>
@@ -422,25 +462,25 @@
 
                   <div class="form-row">
                     <div class="form-holder form-holder-2">
-                    <label for="tanggallahirayah" class="special-label">Tanggal Lahir Ayah *</label>
-                    <div class="col-10">
-                      <input class="form-control" type="date" value="2011-08-19" id="tanggallahirayah" name="tanggallahirayah">
+                      <label for="tanggallahirayah" class="special-label">Tanggal Lahir Ayah *</label>
+                      <div class="col-10">
+                        <input class="form-control" type="date" value="2011-08-19" id="tanggallahirayah" name="tanggallahirayah">
+                      </div>
                     </div>
                   </div>
-                </div>
 
 
-                <div class="form-row">
-                  <div class="form-holder form-holder-2">
-                    <label for="statusayah" class="special-label">Status Ayah Kandung: *</label>
-                    <select name="statusayah" id="statusayah" >
-                      <option value="0" disabled selected>Status Ayah Kandung</option>
-                      <option value="1">Masih Hidup </option>
-                      <option value="2">Sudah Meninggal</option>
-                      <option value="3">Tidak Diketahui</option>
-                    </select>
+                  <div class="form-row">
+                    <div class="form-holder form-holder-2">
+                      <label for="statusayah" class="special-label">Status Ayah Kandung: *</label>
+                      <select name="statusayah" id="statusayah" >
+                        <option value="0" disabled selected>Status Ayah Kandung</option>
+                        <option value="1">Masih Hidup </option>
+                        <option value="2">Sudah Meninggal</option>
+                        <option value="3">Tidak Diketahui</option>
+                      </select>
+                    </div>
                   </div>
-                </div>
 
                   <div class="form-row">
                     <div class="form-holder form-holder-2">
@@ -454,50 +494,50 @@
                   </div>
 
 
-                <div class="form-row">
-                  <div class="form-holder form-holder-2">
-                    <label for="pendidikanayah" class="special-label">Pendidikan Ayah:</label>
-                    <select name="pendidikanayah" id="pendidikanayah" >
-                      <option value="0" disabled selected>Pendidikan Ayah</option>
-                      <option value="1">MI / SD / Sederajat </option>
-                      <option value="2">MTs / SMP</option>
-                      <option value="3">SMK / SMA / MA</option>
-                      <option value="4">D1</option>
-                      <option value="5">D2</option>
-                      <option value="6">D3</option>
-                      <option value="7">D4 / S1</option>
-                      <option value="8">S2</option>
-                      <option value="9">S3</option>
-                    </select>
+                  <div class="form-row">
+                    <div class="form-holder form-holder-2">
+                      <label for="pendidikanayah" class="special-label">Pendidikan Ayah:</label>
+                      <select name="pendidikanayah" id="pendidikanayah" >
+                        <option value="0" disabled selected>Pendidikan Ayah</option>
+                        <option value="1">MI / SD / Sederajat </option>
+                        <option value="2">MTs / SMP</option>
+                        <option value="3">SMK / SMA / MA</option>
+                        <option value="4">D1</option>
+                        <option value="5">D2</option>
+                        <option value="6">D3</option>
+                        <option value="7">D4 / S1</option>
+                        <option value="8">S2</option>
+                        <option value="9">S3</option>
+                      </select>
+                    </div>
                   </div>
-                </div>
 
-                <div class="form-row">
-                  <div class="form-holder form-holder-2">
-                    <label for="pekerjaanayah" class="special-label">Pekerjaan Ayah: </label>
-                    <select name="pekerjaanayah" id="pekerjaanayah" >
-                      <option value="0" disabled selected>Pekerjaan Ayah</option>
-                      <option value="1">Tidak Bekerja </option>
-                      <option value="2">Pensiunan</option>
-                      <option value="3">PNS</option>
-                      <option value="4">TNI/Polisi</option>
-                      <option value="5">Guru/Dosen</option>
-                      <option value="6">Pegawai Swasta</option>
-                      <option value="7">Wiraswasta/Wirausaha</option>
-                      <option value="8">Pengacara/Hakim/Jaksa/Notaris</option>
-                      <option value="9">Seniman/Artis</option>
-                      <option value="10">Dokter/Perawat</option>
-                      <option value="11">Pilot/Pramugara</option>
-                      <option value="12">Pedagang</option>
-                      <option value="13">Petani/Peternak</option>
-                      <option value="14">Nelayan</option>
-                      <option value="15">Buruh (Tani/Pabrik/Bangunan)</option>
-                      <option value="16">Sopir/Masinis/Kondektur</option>
-                      <option value="17">Poiltikus</option>
-                      <option value="18">Lainnya</option>
-                    </select>
+                  <div class="form-row">
+                    <div class="form-holder form-holder-2">
+                      <label for="pekerjaanayah" class="special-label">Pekerjaan Ayah: </label>
+                      <select name="pekerjaanayah" id="pekerjaanayah" >
+                        <option value="0" disabled selected>Pekerjaan Ayah</option>
+                        <option value="1">Tidak Bekerja </option>
+                        <option value="2">Pensiunan</option>
+                        <option value="3">PNS</option>
+                        <option value="4">TNI/Polisi</option>
+                        <option value="5">Guru/Dosen</option>
+                        <option value="6">Pegawai Swasta</option>
+                        <option value="7">Wiraswasta/Wirausaha</option>
+                        <option value="8">Pengacara/Hakim/Jaksa/Notaris</option>
+                        <option value="9">Seniman/Artis</option>
+                        <option value="10">Dokter/Perawat</option>
+                        <option value="11">Pilot/Pramugara</option>
+                        <option value="12">Pedagang</option>
+                        <option value="13">Petani/Peternak</option>
+                        <option value="14">Nelayan</option>
+                        <option value="15">Buruh (Tani/Pabrik/Bangunan)</option>
+                        <option value="16">Sopir/Masinis/Kondektur</option>
+                        <option value="17">Poiltikus</option>
+                        <option value="18">Lainnya</option>
+                      </select>
+                    </div>
                   </div>
-                </div>
 
                   <h3>Ibu</h3>
                   <div class="form-row">
@@ -515,25 +555,25 @@
 
                   <div class="form-row">
                     <div class="form-holder form-holder-2">
-                    <label for="tanggallahiribu" class="special-label">Tanggal Lahir Ibu *</label>
-                    <div class="col-10">
-                      <input class="form-control" type="date" value="2011-08-19" id="tanggallahiribu" name="tanggallahiribu">
+                      <label for="tanggallahiribu" class="special-label">Tanggal Lahir Ibu *</label>
+                      <div class="col-10">
+                        <input class="form-control" type="date" value="2011-08-19" id="tanggallahiribu" name="tanggallahiribu">
+                      </div>
                     </div>
                   </div>
-                </div>
 
 
-                <div class="form-row">
-                  <div class="form-holder form-holder-2">
-                    <label for="statusibu" class="special-label">Status Ibu Kandung: *</label>
-                    <select name="statusibu" id="statusibu" >
-                      <option value="0" disabled selected>Status Ibu Kandung</option>
-                      <option value="1">Masih Hidup </option>
-                      <option value="2">Sudah Meninggal</option>
-                      <option value="3">Tidak Diketahui</option>
-                    </select>
+                  <div class="form-row">
+                    <div class="form-holder form-holder-2">
+                      <label for="statusibu" class="special-label">Status Ibu Kandung: *</label>
+                      <select name="statusibu" id="statusibu" >
+                        <option value="0" disabled selected>Status Ibu Kandung</option>
+                        <option value="1">Masih Hidup </option>
+                        <option value="2">Sudah Meninggal</option>
+                        <option value="3">Tidak Diketahui</option>
+                      </select>
+                    </div>
                   </div>
-                </div>
 
                   <div class="form-row">
                     <div class="form-holder form-holder-2">
@@ -547,50 +587,50 @@
                   </div>
 
 
-                <div class="form-row">
-                  <div class="form-holder form-holder-2">
-                    <label for="pendidikanibu" class="special-label">Pendidikan Ibu:</label>
-                    <select name="pendidikanibu" id="pendidikanibu" >
-                      <option value="0" disabled selected>Pendidikan Ibu</option>
-                      <option value="1">MI / SD / Sederajat </option>
-                      <option value="2">MTs / SMP</option>
-                      <option value="3">SMK / SMA / MA</option>
-                      <option value="4">D1</option>
-                      <option value="5">D2</option>
-                      <option value="6">D3</option>
-                      <option value="7">D4 / S1</option>
-                      <option value="8">S2</option>
-                      <option value="9">S3</option>
-                    </select>
+                  <div class="form-row">
+                    <div class="form-holder form-holder-2">
+                      <label for="pendidikanibu" class="special-label">Pendidikan Ibu:</label>
+                      <select name="pendidikanibu" id="pendidikanibu" >
+                        <option value="0" disabled selected>Pendidikan Ibu</option>
+                        <option value="1">MI / SD / Sederajat </option>
+                        <option value="2">MTs / SMP</option>
+                        <option value="3">SMK / SMA / MA</option>
+                        <option value="4">D1</option>
+                        <option value="5">D2</option>
+                        <option value="6">D3</option>
+                        <option value="7">D4 / S1</option>
+                        <option value="8">S2</option>
+                        <option value="9">S3</option>
+                      </select>
+                    </div>
                   </div>
-                </div>
 
-                <div class="form-row">
-                  <div class="form-holder form-holder-2">
-                    <label for="pekerjaanibu" class="special-label">Pekerjaan Ibu: </label>
-                    <select name="pekerjaanibu" id="pekerjaanibu" >
-                      <option value="0" disabled selected>Pekerjaan Ibu</option>
-                      <option value="1">Tidak Bekerja / Ibu Rumah Tangga</option>
-                      <option value="2">Pensiunan</option>
-                      <option value="3">PNS</option>
-                      <option value="4">TNI/Polisi</option>
-                      <option value="5">Guru/Dosen</option>
-                      <option value="6">Pegawai Swasta</option>
-                      <option value="7">Wiraswasta/Wirausaha</option>
-                      <option value="8">Pengacara/Hakim/Jaksa/Notaris</option>
-                      <option value="9">Seniman/Artis</option>
-                      <option value="10">Dokter/Perawat</option>
-                      <option value="11">Pilot/Pramugari</option>
-                      <option value="12">Pedagang</option>
-                      <option value="13">Petani/Peternak</option>
-                      <option value="14">Nelayan</option>
-                      <option value="15">Buruh (Tani/Pabrik/Bangunan)</option>
-                      <option value="16">Sopir/Masinis/Kondektur</option>
-                      <option value="17">Poiltikus</option>
-                      <option value="18">Lainnya</option>
-                    </select>
+                  <div class="form-row">
+                    <div class="form-holder form-holder-2">
+                      <label for="pekerjaanibu" class="special-label">Pekerjaan Ibu: </label>
+                      <select name="pekerjaanibu" id="pekerjaanibu" >
+                        <option value="0" disabled selected>Pekerjaan Ibu</option>
+                        <option value="1">Tidak Bekerja / Ibu Rumah Tangga</option>
+                        <option value="2">Pensiunan</option>
+                        <option value="3">PNS</option>
+                        <option value="4">TNI/Polisi</option>
+                        <option value="5">Guru/Dosen</option>
+                        <option value="6">Pegawai Swasta</option>
+                        <option value="7">Wiraswasta/Wirausaha</option>
+                        <option value="8">Pengacara/Hakim/Jaksa/Notaris</option>
+                        <option value="9">Seniman/Artis</option>
+                        <option value="10">Dokter/Perawat</option>
+                        <option value="11">Pilot/Pramugari</option>
+                        <option value="12">Pedagang</option>
+                        <option value="13">Petani/Peternak</option>
+                        <option value="14">Nelayan</option>
+                        <option value="15">Buruh (Tani/Pabrik/Bangunan)</option>
+                        <option value="16">Sopir/Masinis/Kondektur</option>
+                        <option value="17">Poiltikus</option>
+                        <option value="18">Lainnya</option>
+                      </select>
+                    </div>
                   </div>
-                </div>
 
 
 
@@ -611,25 +651,25 @@
 
                   <div class="form-row">
                     <div class="form-holder form-holder-2">
-                    <label for="tanggallahirwali" class="special-label">Tanggal Lahir Wali</label>
-                    <div class="col-10">
-                      <input class="form-control" type="date" value="2011-08-19" id="tanggallahirwali" name="tanggallahirwali">
+                      <label for="tanggallahirwali" class="special-label">Tanggal Lahir Wali</label>
+                      <div class="col-10">
+                        <input class="form-control" type="date" value="2011-08-19" id="tanggallahirwali" name="tanggallahirwali">
+                      </div>
                     </div>
                   </div>
-                </div>
 
 
-                <div class="form-row">
-                  <div class="form-holder form-holder-2">
-                    <label for="statusibu" class="special-label">Status Ibu Wali :</label>
-                    <select name="statuswali" id="statuswali" >
-                      <option value="0" disabled selected>Status Wali</option>
-                      <option value="1">Masih Hidup </option>
-                      <option value="2">Sudah Meninggal</option>
-                      <option value="3">Tidak Diketahui</option>
-                    </select>
+                  <div class="form-row">
+                    <div class="form-holder form-holder-2">
+                      <label for="statusibu" class="special-label">Status Ibu Wali :</label>
+                      <select name="statuswali" id="statuswali" >
+                        <option value="0" disabled selected>Status Wali</option>
+                        <option value="1">Masih Hidup </option>
+                        <option value="2">Sudah Meninggal</option>
+                        <option value="3">Tidak Diketahui</option>
+                      </select>
+                    </div>
                   </div>
-                </div>
 
                   <div class="form-row">
                     <div class="form-holder form-holder-2">
@@ -643,68 +683,68 @@
                   </div>
 
 
-                <div class="form-row">
-                  <div class="form-holder form-holder-2">
-                    <label for="pendidikanwali" class="special-label">Pendidikan Wali</label>
-                    <select name="pendidikanwali" id="pendidikanwali" >
-                      <option value="0" disabled selected>Pendidikan Wali</option>
-                      <option value="1">MI / SD / Sederajat </option>
-                      <option value="2">MTs / SMP</option>
-                      <option value="3">SMK / SMA / MA</option>
-                      <option value="4">D1</option>
-                      <option value="5">D2</option>
-                      <option value="6">D3</option>
-                      <option value="7">D4 / S1</option>
-                      <option value="8">S2</option>
-                      <option value="9">S3</option>
-                    </select>
+                  <div class="form-row">
+                    <div class="form-holder form-holder-2">
+                      <label for="pendidikanwali" class="special-label">Pendidikan Wali</label>
+                      <select name="pendidikanwali" id="pendidikanwali" >
+                        <option value="0" disabled selected>Pendidikan Wali</option>
+                        <option value="1">MI / SD / Sederajat </option>
+                        <option value="2">MTs / SMP</option>
+                        <option value="3">SMK / SMA / MA</option>
+                        <option value="4">D1</option>
+                        <option value="5">D2</option>
+                        <option value="6">D3</option>
+                        <option value="7">D4 / S1</option>
+                        <option value="8">S2</option>
+                        <option value="9">S3</option>
+                      </select>
+                    </div>
                   </div>
-                </div>
 
-                <div class="form-row">
-                  <div class="form-holder form-holder-2">
-                    <label for="pekerjaanwali" class="special-label">Pekerjaan Wali: </label>
-                    <select name="pekerjaanwali" id="pekerjaanwali" >
-                      <option value="0" disabled selected>Pekerjaan Ibu</option>
-                      <option value="1">Tidak Bekerja </option>
-                      <option value="2">Pensiunan</option>
-                      <option value="3">PNS</option>
-                      <option value="4">TNI/Polisi</option>
-                      <option value="5">Guru/Dosen</option>
-                      <option value="6">Pegawai Swasta</option>
-                      <option value="7">Wiraswasta/Wirausaha</option>
-                      <option value="8">Pengacara/Hakim/Jaksa/Notaris</option>
-                      <option value="9">Seniman/Artis</option>
-                      <option value="10">Dokter/Perawat</option>
-                      <option value="11">Pilot/Pramugara/Pramugari</option>
-                      <option value="12">Pedagang</option>
-                      <option value="13">Petani/Peternak</option>
-                      <option value="14">Nelayan</option>
-                      <option value="15">Buruh (Tani/Pabrik/Bangunan)</option>
-                      <option value="16">Sopir/Masinis/Kondektur</option>
-                      <option value="17">Poiltikus</option>
-                      <option value="18">Lainnya</option>
-                    </select>
+                  <div class="form-row">
+                    <div class="form-holder form-holder-2">
+                      <label for="pekerjaanwali" class="special-label">Pekerjaan Wali: </label>
+                      <select name="pekerjaanwali" id="pekerjaanwali" >
+                        <option value="0" disabled selected>Pekerjaan Ibu</option>
+                        <option value="1">Tidak Bekerja </option>
+                        <option value="2">Pensiunan</option>
+                        <option value="3">PNS</option>
+                        <option value="4">TNI/Polisi</option>
+                        <option value="5">Guru/Dosen</option>
+                        <option value="6">Pegawai Swasta</option>
+                        <option value="7">Wiraswasta/Wirausaha</option>
+                        <option value="8">Pengacara/Hakim/Jaksa/Notaris</option>
+                        <option value="9">Seniman/Artis</option>
+                        <option value="10">Dokter/Perawat</option>
+                        <option value="11">Pilot/Pramugara/Pramugari</option>
+                        <option value="12">Pedagang</option>
+                        <option value="13">Petani/Peternak</option>
+                        <option value="14">Nelayan</option>
+                        <option value="15">Buruh (Tani/Pabrik/Bangunan)</option>
+                        <option value="16">Sopir/Masinis/Kondektur</option>
+                        <option value="17">Poiltikus</option>
+                        <option value="18">Lainnya</option>
+                      </select>
+                    </div>
                   </div>
-                </div>
 
 
                   <h3>Penghasilan / Bantuan Dan Lain-lain</h3>
                   <p>Isi Data Penghasilan / Bantuan Dengan Lengkap Dan Benar</p>
-                <div class="form-row">
-                  <div class="form-holder form-holder-2">
-                    <label for="penghasilan" class="special-label">Rata-Rata Penghasilan Orang Tua/Wali: Per Bulan *</label>
-                    <select name="penghasilan" id="penghasilan" >
-                      <option value="0" disabled selected>Pilih</option>
-                      <option value="1">Kurang Dari Rp 500.000,- </option>
-                      <option value="2">Rp 500.000 - 1.000.000</option>
-                      <option value="3">Rp 1.000.000 - 2.000.000</option>
-                      <option value="4">Rp 2.000.000 - 3.000.000</option>
-                      <option value="5">Rp 3.000.000 - 5.000.000</option>
-                      <option value="6">Lebih Dari Rp 5.000.000</option>
-                    </select>
+                  <div class="form-row">
+                    <div class="form-holder form-holder-2">
+                      <label for="penghasilan" class="special-label">Rata-Rata Penghasilan Orang Tua/Wali: Per Bulan *</label>
+                      <select name="penghasilan" id="penghasilan" >
+                        <option value="0" disabled selected>Pilih</option>
+                        <option value="1">Kurang Dari Rp 500.000,- </option>
+                        <option value="2">Rp 500.000 - 1.000.000</option>
+                        <option value="3">Rp 1.000.000 - 2.000.000</option>
+                        <option value="4">Rp 2.000.000 - 3.000.000</option>
+                        <option value="5">Rp 3.000.000 - 5.000.000</option>
+                        <option value="6">Lebih Dari Rp 5.000.000</option>
+                      </select>
+                    </div>
                   </div>
-                </div>
 
 
                   <div class="form-row">
@@ -741,7 +781,7 @@
                     </div>
                   </div>
 
-                    <div class="form-row">
+                  <div class="form-row">
                     <div class="form-holder form-holder-2">
                       <label class="form-row-inner">
                         <input type="text" name="alamatotwali" id="alamatotwali" class="form-control" required onfocus="this.placeholder = 'Alamat Tempat Tinggal Orang Tua/Wali'"
@@ -753,42 +793,44 @@
                   </div>
 
                   <div class="form-row">
-                  <div class="form-holder form-holder-2">
-                    <label for="sktm" class="special-label">Apakah ANda Mempunya Surat Keterangan Tidak Mampu (SKTM) *</label>
-                    <select name="penghasilan" id="penghasilan" >
-                      <option value="0" disabled selected>Jika Ya, harap lampirkan SKTM kepada pihak Madrasah</option>
-                      <option value="1">Ya</option>
-                      <option value="2">Tidak</option>
-                    </select>
+                    <div class="form-holder form-holder-2">
+                      <label for="sktm" class="special-label">Apakah ANda Mempunya Surat Keterangan Tidak Mampu (SKTM) *</label>
+                      <select name="penghasilan" id="penghasilan" >
+                        <option value="0" disabled selected>Jika Ya, harap lampirkan SKTM kepada pihak Madrasah</option>
+                        <option value="1">Ya</option>
+                        <option value="2">Tidak</option>
+                      </select>
+                    </div>
                   </div>
-                </div>
                 </section>
 
 
-            <!-- SECTION 5 -->
-            <h2>
-              <span class="step-icon"><i class="zmdi zmdi-receipt"></i></span>
-              <span class="step-text">Motivasi</span>
+                <!-- SECTION 5 -->
+                <h2>
+                  <span class="step-icon"><i class="zmdi zmdi-receipt"></i></span>
+                  <span class="step-text">Motivasi</span>
 
-            </h2>
-            <section>
-              <div class="inner">
-                <h3>Motivasi</h3>
-                <p>Ini Adalah Sesi Akhir Dari Isian Formulir. Tanda Bintang *) Wajib Diisi</p>
+                </h2>
+                <section>
+                  <div class="inner">
+                    <h3>Motivasi</h3>
+                    <p>Ini Adalah Sesi Akhir Dari Isian Formulir. Tanda Bintang *) Wajib Diisi</p>
 
-                  <div class="form-row">
-                    <div class="form-holder form-holder-2">
-                      <label class="form-row-inner">
-                        <input type="text" name="motivasi" id="motivasi" class="form-control" required onfocus="this.placeholder = 'Tulis alasan anda ingin bersekolah di MA Nuurus Salaam'"
-                        onblur="this.placeholder = ''">
-                        <span class="label">Motivasi Melanjutkan ke MA Nuurus Salaam *</span>
-                        <span class="border"></span>
-                      </label>
+                    <div class="form-row">
+                      <div class="form-holder form-holder-2">
+                        <label class="form-row-inner">
+                          <input type="text" name="motivasi" id="motivasi" class="form-control" required onfocus="this.placeholder = 'Tulis alasan anda ingin bersekolah di MA Nuurus Salaam'"
+                          onblur="this.placeholder = ''">
+                          <span class="label">Motivasi Melanjutkan ke MA Nuurus Salaam *</span>
+                          <span class="border"></span>
+                        </label>
+                      </div>
                     </div>
+
+                    <h4>Jika Data Yang Di Isi Sudah Lengkap Dan Benar Silahkan Klik "SUBMIT", Jika Data Masih Ada Yang Perlu Diperbaiki, Klik "BACK STEP" </h4>
+
                   </div>
-
-                  <h4>Jika Data Yang Di Isi Sudah Lengkap Dan Benar Silahkan Klik "SUBMIT", Jika Data Masih Ada Yang Perlu Diperbaiki, Klik "BACK STEP" </h4>
-
+                </section>
 
 
 
