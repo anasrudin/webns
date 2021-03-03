@@ -11,10 +11,15 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import sys
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+# Include BOOTSTRAP5_FOLDER in path
+BOOTSTRAP5_FOLDER = os.path.abspath(os.path.join(BASE_DIR, "..", "bootstrap5"))
+if BOOTSTRAP5_FOLDER not in sys.path:
+    sys.path.insert(0, BOOTSTRAP5_FOLDER)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
@@ -177,3 +182,11 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 TEMPLATE_DIRS = (
     os.path.join(os.path.dirname(__file__), 'templates'),
 )
+
+
+# Settings for django-bootstrap-v5
+BOOTSTRAP5 = {
+    "error_css_class": "bootstrap5-error",
+    "required_css_class": "bootstrap5-required",
+    "javascript_in_head": True,
+}
