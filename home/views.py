@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .forms import DataSiswaForm
 
+
+from django.contrib import messages
 # Create your views here.
 
 
@@ -23,8 +25,16 @@ def formpsb(request):
     else:
         form = DataSiswaForm(request.POST)
         if form.is_valid():
-            form.save()
-        return render(request, 'index.html')
+            profile = form.save(commit=False)
+            profile.save()
+            messages.success(request, f"Success")
+        return redirect('sukses')
 
-def siswa_form(request):
-    return
+        # return render(request, 'home/formpsb.html', {'form':form})
+
+def sukses(request):
+    context = {
+    'page_title': 'Registrasi Berhasil',
+    }
+    
+    return render(request, 'home/sukses.html')
