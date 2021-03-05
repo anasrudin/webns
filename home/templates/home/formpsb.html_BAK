@@ -620,13 +620,13 @@
                         <option value="8">Pengacara/Hakim/Jaksa/Notaris</option>
                         <option value="9">Seniman/Artis</option>
                         <option value="10">Dokter/Perawat</option>
-                        <option value="11">Pilot/Pramugari</option>
+                        <option value="11">Pilot / Pramugara/i</option>
                         <option value="12">Pedagang</option>
                         <option value="13">Petani/Peternak</option>
                         <option value="14">Nelayan</option>
                         <option value="15">Buruh (Tani/Pabrik/Bangunan)</option>
                         <option value="16">Sopir/Masinis/Kondektur</option>
-                        <option value="17">Poiltikus</option>
+                        <option value="17">Politikus</option>
                         <option value="18">Lainnya</option>
                       </select>
                     </div>

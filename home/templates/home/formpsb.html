@@ -17,7 +17,7 @@
   <meta name="description" content="">
   <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
   <meta name="generator" content="Hugo 0.80.0">
-  <title>Checkout example · Bootstrap v5.0</title>
+  <title>PSB MA Nuurus Salaam</title>
 
   <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/checkout/">
 
@@ -76,30 +76,32 @@
               {%csrf_token%}
 
               <h3>Data Pribadi</h3>
-              {% bootstrap_form form layout='horizontal' size='sm' %}
+              {% bootstrap_form form1 layout='horizontal' size='sm' %}
+              <hr class="my-4">
+              
+              <h3>Data Sekolah/Madrasah Sebelumnya</h3>
+              {% bootstrap_form form2 layout='horizontal' size='sm' %}
+              <hr class="my-4">
+              
+              <h3>Data Tempat Tinggal</h3>
+              {% bootstrap_form form3 layout='horizontal' size='sm' %}
+              <hr class="my-4">
 
+              <h3>Data Orang Tua / Wali</h3>
+              <p>Kosongkan kolom wali jika Tidak tinggal bersama Wali</p>
+              {% bootstrap_form form4 layout='horizontal' size='sm' %}
+              <hr class="my-4">
+
+              <h3>Motivasi</h3>
+              {% bootstrap_form form5 layout='horizontal' size='sm' %}
+              <hr class="my-4">
+              <p style="text-align:center;"> Harap Periksa Kembali sebelum mengirim berkas</p>
             </div>
 
 
-        <!--
-        <div class="row">
-          <div class="col-md-6"></div>
 
 
-        </div>
-      -->
-
- <!--
-        {% bootstrap_field form.nama layout='horizontal' size='sm' %}
-        {% bootstrap_field form.nisn layout='horizontal' size='sm' %}
-        {% bootstrap_field form.nik layout='horizontal' size='sm' %}
-        {% bootstrap_field form.tempatlahir layout='horizontal' size='sm' %}
-        {% bootstrap_field form.tanggallahir layout='horizontal' size='sm' %}
-        {% bootstrap_field form.jeniskelamin layout='horizontal' size='sm' %}
-
-      -->
-
-      <hr class="my-4">
+      
 <!--       {% if messages %}
       {% for msg in messages %}
       <div class="alert alert-info alert-dismissable">
@@ -111,8 +113,9 @@
 
 
 
-
-      <button id="submit_button" name="submit_button" class="w-100 btn btn-primary btn-lg" type="submit"  >Klik untuk Mendaftar</button>
+      <div class="text-center">
+      <button id="submit_button" name="submit_button" class="w-40 btn btn-primary btn-lg" type="submit"  >Klik untuk Mendaftar</button>
+      </div>
 
     <!--   <input type="submit" name="upload" class="btn btn-primary" 
        value="Upload" {% if not enable %}disabled{%endif%} /> -->

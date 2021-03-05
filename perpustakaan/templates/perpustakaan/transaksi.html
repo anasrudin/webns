@@ -29,14 +29,14 @@
           </thead>
           <tbody>
             {% for posting in getPosting %}
-              <tr>
+            <tr>
               <th scope="row">{{forloop.counter}}</th>
 
               <td>                
                 <a class="btn btn-warning btn-circle" href="#" title="Update"><i class="fas fa-edit"></i></a>
                 <a class="btn btn-danger btn-circle" href="#" title="Delete"><i class="fas fa-trash"></i></a>
-</td>
-              </tr>
+              </td>
+            </tr>
             {% endfor %}
           </tbody>
         </table>
