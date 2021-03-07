@@ -1,5 +1,6 @@
 from django.db import models
 
+from django.contrib import admin
 
 pilihan_kelamin = (("Laki-Laki", "Laki-Laki"), ("Perempuan", "Perempuan"))
 pilihan_hobi = (("Olahraga", "Olahraga"), ("Kesenian", "Kesenian"), ("Membaca", "Membaca"), ("Menulis", "Menulis"),("Jalan-Jalan", "Jalan-Jalan"), ("Lainnya", "Lainnya"))
@@ -24,7 +25,7 @@ class DataSiswa(models.Model):
 	hp =  models.IntegerField()
 	email = models.CharField(max_length=255)
 
-
+admin.site.register(DataSiswa)
 
 
 
@@ -125,4 +126,48 @@ class DataOrtu(models.Model):
 
 class DataMotivasi(models.Model):
 	motivasi = models.CharField(max_length=255)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# class Psb(models.Model):
+# 	siswa_id = models.ForeignKey('home.DataSiswa', on_delete=models.CASCADE, null=True, blank=True)
+
+
+# # tambahan jika siswa adalah
+# pilihan_tahunmasuk = (("2018/2019", "2018/2019"), ("2019/2020", "2019/2020"), ("2020/2021","2020/2021"))
+# pilihan_statussiswa = (
+# 	("Pendaftar", "Pendaftar"),
+# 	("Tidak Diterima", "Tidak Diterima"),
+# 	("Pindahan", "Pindahan"),
+# 	("Aktif", "Aktif"),
+# 	("Keluar", "Keluar"),
+# 	("Lulus", "Lulus")
+# 	)
+
+
+# class DataSiswaTambahan(models.Model):
+# 	# tambahan
+# 	tahunmasuk = models.CharField(max_length=25, choices=pilihan_tahunmasuk)
+# 	statussiswa = models.CharField(max_length=25, choices=pilihan_statussiswa)
+# 	nislokal = models.CharField(max_length=255)
+# 	# kelas =
 

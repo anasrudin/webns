@@ -62,13 +62,13 @@
           </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{% url 'psb:indexPSB' %}" data-toggle="collapse" data-target="#collapsePSB" aria-expanded="true" aria-controls="collapsePSB">
+        <a class="nav-link" href="{% url 'psb:indexPSB' %}" data-toggle="collapse" data-target="#collapseHome" aria-expanded="true" aria-controls="collapseHome">
           <i class="fas fa-user-tie"></i>
           <span>Penerimaan Siswa</span></a>
-          <div id="collapsePSB" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div id="collapseHome" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Penerimaan Siswa:</h6>
-            <a class="collapse-item" href="{% url 'psb:indexPSB' %}" class="no-collapsable">Daftar Calon Siswa</a>
+            <a class="collapse-item" href="{% url 'home:list' %}" class="no-collapsable">Home Daftar Calon Siswa</a>
           </div>
       </li>
 

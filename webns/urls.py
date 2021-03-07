@@ -23,7 +23,8 @@ from django.contrib.auth import views as auth_views
 from .views import index, loginView, logoutView
 
 urlpatterns = [
-	path('', include('home.urls')),
+	# path('', include('home.urls')),
+    path('', include(('home.urls', 'home'), namespace='home')),
     url(r'^$', RedirectView.as_view(url='/login/')),
 	url(r'^login/$', loginView, name="login"),
     url(r'^logout/$', logoutView, name="logout"),
@@ -31,5 +32,6 @@ urlpatterns = [
     path('keuangan/', include('keuangan.urls', namespace='keuangan')),
     path('perpustakaan/', include('perpustakaan.urls', namespace='perpustakaan')),
     path('psb/', include('psb.urls', namespace='psb')),
+    # path('home/', include('home.urls', namespace='home')),
     path('admin/', admin.site.urls),
 ]

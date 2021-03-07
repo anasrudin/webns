@@ -6,15 +6,80 @@
   <!-- Page Heading -->
   <h1 class="h3 mb-2 text-gray-800">Calon Siswa Baru</h1>
 
-  <!-- DataTales Example -->
-  <div class="card shadow mb-4">
+
+  <h2>Dynamic content</h2>
+  <p>The library has the following record counts:</p>
+  <ul>
+    <li><strong>Siswa:</strong> {{ jumlah_siswa }}</li>
+  </ul>
+
+
+<p>jumlah siswanya</p>
+
+<!--   {% for siswa in getDataSiswa %}
+  <tr>
+    <th scope="row">{{forloop.counter}}</th>
+    <td> {{siswa.nama}}</td>
+    <td> {{siswa.jeniskelamin}}</td>
+    <td> {{siswa.sekolahasal}}</td>
+    <td> {{siswa.hp}}</td>
+    <td> {{siswa.email}}</td>
+    <td>
+      <a class="btn btn-warning btn-circle" href="{% url 'masterdata:updateAkun' akun.id %}" title="Update"><i class="fas fa-edit"></i></a>
+      <a class="btn btn-danger btn-circle" href="{% url 'masterdata:deleteAkun' akun.id %}" title="Delete"><i class="fas fa-trash"></i></a>
+    </td>
+  </tr> 
+  {% endfor %}-->
+
+
+
+
+
+
+<!--      DataTales Example -->
+
+<!--   <div class="card shadow mb-4">
     <div class="card-header py-3">
-      <h6 class="m-0 font-weight-bold text-primary">Data Calon Siswa Baru</h6>
+      <h6 class="m-0 font-weight-bold text-primary">Data Akun</h6>
     </div>
     <div class="card-body">
-      <a class="btn btn-primary" href="" style="float:right;"><i class="fas fa-pen"></i>Add User</a>
+      <a class="btn btn-primary" href="#" style="float:right;"><i class="fas fa-pen"></i>Add Akun</a>
+      <div class="table-responsive">
+        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Nama</th>
+              <th>Jenis Kelamin</th>
+              <th>Sekolah Asal</th>
+              <th>HP</th>
+              <th>Email</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for siswa in student_number %}
+            <tr>
+              <th scope="row">{{forloop.counter}}</th>
+              <td> {{siswa.nama}}</td>
+              <td> {{siswa.jeniskelamin}}</td>
+              <td> {{siswa.sekolahasal}}</td>
+              <td> {{siswa.hp}}</td>
+              <td> {{siswa.email}}</td>
+              <td>
+                <a class="btn btn-warning btn-circle" href="{% url 'masterdata:updateAkun' akun.id %}" title="Update"><i class="fas fa-edit"></i></a>
+                <a class="btn btn-danger btn-circle" href="{% url 'masterdata:deleteAkun' akun.id %}" title="Delete"><i class="fas fa-trash"></i></a>
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
     </div>
-  </div>
+  </div> 
+ -->
+
+
 
 </div>
 {% endblock %}

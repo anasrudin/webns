@@ -1,10 +1,12 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .forms import DataSiswaForm, DataSekolahForm, DataTinggalForm, DataOrtuForm, DataMotivasiForm
-
+from .models import DataSiswa
 
 from django.contrib import messages
 # Create your views here.
+
+from django.contrib.auth.decorators import login_required
 
 
 def index(request):
@@ -54,3 +56,17 @@ def sukses(request):
     }
     
     return render(request, 'home/sukses.html')
+
+
+@login_required(login_url='/login/')
+def list(request):
+    # Generate counts of some of the main objects
+    num_siswa = DataSiswa.objects.count()
+
+
+    context = {
+    'page_title': 'Rlist pendaftar',
+    'num_siswa':num_siswa,
+    }
+    
+    return render(request, 'home/list.html', context)

@@ -1,7 +1,13 @@
 from django.db import models
+from django.apps import apps
+
+
+from home.models import DataSiswa
 
 # Create your models here.
 
+class Psb(models.Model):
+	siswa_id = models.ForeignKey('home.DataSiswa', on_delete=models.CASCADE, null=True, blank=True)
 
 
 # tambahan jika siswa adalah
@@ -21,3 +27,12 @@ class DataSiswaTambahan(models.Model):
 	statussiswa = models.CharField(max_length=25, choices=pilihan_statussiswa)
 	nislokal = models.CharField(max_length=255)
 	# kelas =
+
+
+# HomeDataSiswa = get_model('home', 'DataSiswa')
+
+class HomeDataSiswa(models.Model):
+   psbmodel = models.ForeignKey('home.DataSiswa', on_delete=models.CASCADE, null=True, blank=True)
+
+# class HomeDataSiswa(models.Model):
+# 	psbmodel = models.ManyToManyField(DataSiswa)
