@@ -41,8 +41,8 @@
               <th scope="row">{{siswa.sekolahasal}}</th>
               <th scope="row">{{siswa.hp}}</th>
               <td>                
-                <a class="btn btn-warning btn-circle" href="#" title="Update"><i class="fas fa-edit"></i></a>
-                <a class="btn btn-danger btn-circle" href="#" title="Delete"><i class="fas fa-trash"></i></a>
+                <a class="btn btn-warning btn-circle" href="{% url 'home:updatepsb' siswa.id %}" title="Update"><i class="fas fa-edit"></i></a>
+                <a class="btn btn-danger btn-circle" href="{% url 'home:deletepsb' siswa.id %}"  title="Delete"><i class="fas fa-trash"></i></a>
               </td>
             </tr>
             {% endfor %}

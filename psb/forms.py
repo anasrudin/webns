@@ -1,6 +1,6 @@
 from django import forms
 from .models import Psb
-from home.models import DataSiswa
+# from home.models import DataSiswa
 
 
 class postingModelChoiceField(forms.ModelChoiceField):
@@ -8,5 +8,5 @@ class postingModelChoiceField(forms.ModelChoiceField):
         return "%s (%s)" % (obj.id, obj.nama)
 
 
-class PsbForm(forms.ModelForm):
-	posting_id = postingModelChoiceField(label="DataSiswa", queryset=DataSiswa.objects.all(), widget=forms.Select(attrs={'class': 'form-control'}))
+# class PsbForm(forms.ModelForm):
+	# posting_id = postingModelChoiceField(label="DataSiswa", queryset=DataSiswa.objects.all(), widget=forms.Select(attrs={'class': 'form-control'}))

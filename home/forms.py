@@ -1,5 +1,6 @@
 from django import forms
-from .models import DataSiswa, DataSekolah, DataTinggal, DataOrtu, DataMotivasi
+from .models import DataSiswa, DataSekolah, DataTinggal, DataOrtu, DataKegiatan
+
 
 
 class DateInput(forms.DateInput):
@@ -226,16 +227,73 @@ class DataOrtuForm(forms.ModelForm):
 		self.fields['kip'].widget.attrs['placeholder'] = 'Nomor Kartu Indonesia Pintar (KIP)'
 
 
-class DataMotivasiForm(forms.ModelForm):
+class DataKegiatanForm(forms.ModelForm):
 	class Meta:
-		model = DataMotivasi
-		fields = ['motivasi']
+		model = DataKegiatan
+		fields = '__all__'
 		widget = { 
 		'motivasi' : forms.TextInput(attrs={'class':'form-control'}),
+		'statussiswa' : forms.Select(attrs={'class':'form-control'}),
+		'tahunmasuk' : forms.TextInput(attrs={'class':'form-control'}),
+		'nislokal' : forms.TextInput(attrs={'class':'form-control'}),
+		'kelas' : forms.Select(attrs={'class':'form-control'}),
+		'jurusan' : forms.Select(attrs={'class':'form-control'}),
+		'poinpelanggaran' : forms.TextInput(attrs={'class':'form-control'}),
+		'pinjamanbuku' : forms.TextInput(attrs={'class':'form-control'}),
 		}
 		labels = {
-		'motivasi' : 'Motivasi*'
+		'motivasi' : 'Motivasi*',
+		'statussiswa' : 'Status Siswa',
+		'tahunmasuk' : 'Tahun Masuk',
+		'nislokal' : 'NIS Lokal',
+		'kelas' : 'Kelas',
+		'jurusan' : 'Jurusan',
+		'poinpelanggaran' : 'Poin Pelanggaran',
+		'pinjamanbuku' : 'Jumlah Pinjaman Buku',
 		}
 	def __init__(self, *args, **kwargs):
-		super(DataMotivasiForm, self).__init__(*args, **kwargs)
+		super(DataKegiatanForm, self).__init__(*args, **kwargs)
 		self.fields['motivasi'].widget.attrs['placeholder'] = 'Tulis alasan/motivasi anda ingin bersekolah di MA Nuurus Salaam'
+		self.fields['statussiswa'].required = False
+		self.fields['tahunmasuk'].required = False
+		self.fields['nislokal'].required = False
+		self.fields['kelas'].required = False
+		self.fields['jurusan'].required = False
+		self.fields['poinpelanggaran'].required = False
+		self.fields['pinjamanbuku'].required = False
+
+
+
+
+
+# class DataCobaForm(forms.ModelForm):
+# 	class Meta:
+# 		model = DataCoba
+# 		fields = '__all__'
+# 		widget = { 
+# 		'data' : forms.TextInput(attrs={'class':'form-control'}),
+# 		}
+# 		labels = {
+# 		'data' : 'data*',
+# 		}
+# 	def __init__(self, *args, **kwargs):
+# 		super(DataCobaForm, self).__init__(*args, **kwargs)
+# 		# self.fields['motivasi'].widget.attrs['placeholder'] = 'Tulis alasan/motivasi anda ingin bersekolah di MA Nuurus Salaam'
+# 		self.fields['data'].required = False
+
+
+
+# class DataStatusSiswaForm(forms.ModelForm):
+# 	class Meta:
+# 		model = DataStatusSiswa
+# 		fields = ['statussiswa']
+# 		widget = { 
+# 		'statussiswa' : forms.Select(attrs={'class':'form-control'}),
+# 		}
+# 		labels = {
+# 		'statussiswa' : 'Status Siswa'
+# 		}
+# 	def __init__(self, *args, **kwargs):
+# 		super(DataStatusSiswaForm, self).__init__(*args, **kwargs)
+# 		self.fields['statussiswa'].required = False
+# 		# self.fields['motivasi'].widget.attrs['placeholder'] = 'Tulis alasan/motivasi anda ingin bersekolah di MA Nuurus Salaam'

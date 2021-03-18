@@ -61,9 +61,9 @@
     <main>
       <div class="py-5 text-center">
 
-        <h2>Formulir Online Pendaftaran Peserta Didik Baru</h2>
+        <h2>Data Formulir Online Pendaftaran Peserta Didik Baru</h2>
         <h3>Madrasah Aliyah Nuurus Salaam</h3>
-        <p class="lead">Isi Data Pribadi Anda Dengan Lengkap Dan Benar. Tanda Bintang *) Wajib Diisi
+        <p class="lead">Tanda Bintang *) Wajib Diisi
         </p>
       </div>
 
@@ -75,7 +75,7 @@
 
               {%csrf_token%}
 
-              <h3>Data Pribadi</h3>
+              <h3>Data Pribadi Siswa</h3>
               {% bootstrap_form form1 layout='horizontal' size='sm' %}
               <hr class="my-4">
               
@@ -93,14 +93,14 @@
               <hr class="my-4">
 
               <h3>Motivasi</h3>
-              {% bootstrap_field form5.motivasi layout='horizontal' size='sm' %}
+              {% bootstrap_form form5 layout='horizontal' size='sm' %}
               <hr class="my-4">
-              <p style="text-align:center;"> Harap Periksa Kembali sebelum mengirim berkas</p>
+              <p style="text-align:center;"> Harap Periksa Kembali sebelum memperbaharui berkas</p>
             </div>
 
 
             <div class="text-center">
-              <button id="submit_button" name="submit_button" class="w-40 btn btn-primary btn-lg" type="submit"  >Klik untuk Mendaftar</button>
+              <button id="submit_button" name="submit_button" class="w-40 btn btn-primary btn-lg" type="submit"  >Perbaharui Informasi Siswa</button>
             </div>
 
     <!--   <input type="submit" name="upload" class="btn btn-primary" 

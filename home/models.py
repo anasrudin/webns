@@ -123,26 +123,41 @@ class DataOrtu(models.Model):
 	sktm = models.CharField(max_length=100, choices=pilihan_sktm, default=None)
 
 
+pilihan_statussiswa = (
+	("Pendaftar", "Pendaftar"),
+	("Tidak Diterima", "Tidak Diterima"),
+	("Pindahan", "Pindahan"),
+	("Aktif", "Aktif"),
+	("Keluar", "Keluar"),
+	("Lulus", "Lulus")
+	)
+pilihan_kelas = (
+	(" ", " "),
+	("X", "X"),
+	("XI", "XI"),
+	("XII", "XII")
+	)
+pilihan_jurusan = (
+	(" ", " "),
+	("IIS", "IIS"),
+	("IIK", "IIK"),
+	("MIA", "MIA")
+	)
 
-class DataMotivasi(models.Model):
+class DataKegiatan(models.Model):
 	motivasi = models.CharField(max_length=255)
+	statussiswa = models.CharField(max_length=100, choices=pilihan_statussiswa, default="Pendaftar")
+	tahunmasuk = models.CharField(max_length=25, blank=True)
+	nislokal = models.CharField(max_length=255, blank=True)
+	kelas = models.CharField(max_length=100, blank=True, choices=pilihan_kelas, default=" ")
+	jurusan = models.CharField(max_length=100, null=True, blank=True, choices=pilihan_jurusan, default=" ")
+	poinpelanggaran = models.IntegerField(null=True, default=0)
+	pinjamanbuku = models.IntegerField(null=True, default=0)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# class DataStatusSiswa(models.Model):
+# 	statussiswa = models.CharField(max_length=100, choices=pilihan_statussiswa, default="Pendaftar")
 
 
 

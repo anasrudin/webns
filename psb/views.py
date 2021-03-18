@@ -9,8 +9,8 @@ from django.contrib.auth.models import User
 
 #data
 from home.models import *
-from .models import Psb
-from .forms import PsbForm
+# from .models import Psb
+# from .forms import PsbForm
 
 # Create your views here.
 @login_required(login_url='/login/')
@@ -34,7 +34,7 @@ def index(request):
 
 @login_required(login_url='/login/')
 def indexPsb(request):
-	jumlah_siswa = HomeDataSiswa.objects.count()
+	# jumlah_siswa = HomeDataSiswa.objects.count()
 	print('jumlah_siswa')
 	print(jumlah_siswa)
 
