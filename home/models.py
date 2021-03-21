@@ -9,8 +9,56 @@ pilihan_citacita = (("PNS", "PNS"), ("TNI/Porli", "TNI/Porli"), ("Guru/Dosen", "
 
 
 
+
+
+pilihan_statussiswa = (
+	("Pendaftar", "Pendaftar"),
+	("Tidak Diterima", "Tidak Diterima"),
+	("Pindahan", "Pindahan"),
+	("Aktif", "Aktif"),
+	("Keluar", "Keluar"),
+	("Lulus", "Lulus")
+	)
+pilihan_kelas = (
+	(" ", " "),
+	("X", "X"),
+	("XI", "XI"),
+	("XII", "XII")
+	)
+pilihan_jurusan = (
+	(" ", " "),
+	("IIS", "IIS"),
+	("IIK", "IIK"),
+	("MIA", "MIA")
+	)
+
+class DataKegiatan(models.Model):
+	motivasi = models.CharField(max_length=255)
+	statussiswa = models.CharField(max_length=100, choices=pilihan_statussiswa, default="Pendaftar")
+	tahunmasuk = models.CharField(max_length=25, blank=True)
+	nislokal = models.CharField(max_length=255, blank=True)
+	kelas = models.CharField(max_length=100, blank=True, choices=pilihan_kelas, default=" ")
+	jurusan = models.CharField(max_length=100, null=True, blank=True, choices=pilihan_jurusan, default=" ")
+	poinpelanggaran = models.IntegerField(null=True, default=0)
+	pinjamanbuku = models.IntegerField(null=True, default=0)
+
+	def __str__(self):
+		return self.motivasi
+admin.site.register(DataKegiatan)
+
+
+
+
+
+
+
+
+
 # Create your models here.
 class DataSiswa(models.Model):
+	# kegiatan_id = models.ForeignKey('DataKegiatan', on_delete=models.CASCADE, null=True, blank=True)
+	
+
 	nama =  models.CharField(max_length=255)
 	nisn =  models.CharField(max_length=255)
 	nik =  models.CharField(max_length=255)
@@ -25,7 +73,24 @@ class DataSiswa(models.Model):
 	hp =  models.IntegerField()
 	email = models.CharField(max_length=255)
 
+	# ForeignKey
+	# sekolah = models.ForeignKey(DataSekolah, on_delete=models.CASCADE)
+	# tinggal = models.ForeignKey(DataTinggal, on_delete=models.CASCADE)
+	# ortu = models.ForeignKey(DataOrtu, on_delete=models.CASCADE)
+	# kegiatan = models.ForeignKey(DataKegiatan, on_delete=models.CASCADE)
+	def __str__(self):
+		return self.nama
+
+	# 	class Meta:
+	# 		ordering = ['nama']
+
+
+
 admin.site.register(DataSiswa)
+
+
+
+
 
 
 
@@ -37,7 +102,7 @@ class DataSekolah(models.Model):
 	npsn = models.CharField(max_length=255)
 	noijazah = models.CharField(max_length=255)
 
-
+admin.site.register(DataSekolah)
 
 
 pilihan_tinggal = (("Tinggal Dengan Orang Tua/Wali", "Tinggal Dengan Orang Tua/Wali"), ("Ikut Saudara/Kerabat", "Ikut Saudara/Kerabat"), ("Asrama Madrasah", "Asrama Madrasah"), ("Kontrak/Kost", "Kontrak/Kost"), ("Asrama Pesantren", "Asrama Pesantren"), ("Panti Asuhan", "Panti Asuhan"), ("Rumah Singgah", "Rumah Singgah"), ("Lainnya", "Lainnya"))
@@ -56,7 +121,7 @@ class DataTinggal(models.Model):
 	kodepos = models.CharField(max_length=255) #optional
 	jaraktinggal = models.CharField(max_length=100, choices=pilihan_jarak, default=None)
 	transportasi = models.CharField(max_length=100, choices=pilihan_transportasi, default=None)
-
+admin.site.register(DataTinggal)
 
 
 
@@ -121,38 +186,8 @@ class DataOrtu(models.Model):
 	kip =models.CharField(max_length=255) #optional
 	alamatortuwali = models.CharField(max_length=255) 
 	sktm = models.CharField(max_length=100, choices=pilihan_sktm, default=None)
+admin.site.register(DataOrtu)
 
-
-pilihan_statussiswa = (
-	("Pendaftar", "Pendaftar"),
-	("Tidak Diterima", "Tidak Diterima"),
-	("Pindahan", "Pindahan"),
-	("Aktif", "Aktif"),
-	("Keluar", "Keluar"),
-	("Lulus", "Lulus")
-	)
-pilihan_kelas = (
-	(" ", " "),
-	("X", "X"),
-	("XI", "XI"),
-	("XII", "XII")
-	)
-pilihan_jurusan = (
-	(" ", " "),
-	("IIS", "IIS"),
-	("IIK", "IIK"),
-	("MIA", "MIA")
-	)
-
-class DataKegiatan(models.Model):
-	motivasi = models.CharField(max_length=255)
-	statussiswa = models.CharField(max_length=100, choices=pilihan_statussiswa, default="Pendaftar")
-	tahunmasuk = models.CharField(max_length=25, blank=True)
-	nislokal = models.CharField(max_length=255, blank=True)
-	kelas = models.CharField(max_length=100, blank=True, choices=pilihan_kelas, default=" ")
-	jurusan = models.CharField(max_length=100, null=True, blank=True, choices=pilihan_jurusan, default=" ")
-	poinpelanggaran = models.IntegerField(null=True, default=0)
-	pinjamanbuku = models.IntegerField(null=True, default=0)
 
 
 

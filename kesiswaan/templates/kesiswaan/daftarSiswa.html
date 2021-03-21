@@ -4,15 +4,71 @@
 <div class="container-fluid">
 
   <!-- Page Heading -->
-  <h1 class="h3 mb-2 text-gray-800">Daftar Siswa</h1>
+  <h1 class="h3 mb-2 text-gray-800">Data Siswa Aktif</h1>
 
-  <!-- DataTales Example -->
+
+<p>There are {{ sis_count }} student currently in the database</p>
+
+<!-- DataTales Example -->
   <div class="card shadow mb-4">
     <div class="card-header py-3">
-      <h6 class="m-0 font-weight-bold text-primary">Data Siswa</h6>
+      <h6 class="m-0 font-weight-bold text-primary">Data Siswa Aktif</h6>
     </div>
     <div class="card-body">
-      <a class="btn btn-primary" href="" style="float:right;"><i class="fas fa-pen"></i>Tambah Siswa</a>
+      <a class="btn btn-primary" href="#" style="float:right;"><i class="fas fa-pen"></i>Add Transaksi</a>
+      <div class="table-responsive">
+        <table class="table table-bordered" id="dataTable" width="50%" cellspacing="0">
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Nama</th>
+
+              <th>Jenis Kelamin</th>
+
+              <th>Aksi</th>
+
+            </tr>
+          </thead>
+          <tbody>
+
+            {% for siswa in datasiswa  %}
+
+              
+
+            
+
+            <tr>
+              <th scope="row">{{forloop.counter}}</th>
+              <th scope="row">{{siswa.nama}}</th>
+
+              <th scope="row">{{siswa.jeniskelamin}}</th>
+
+
+              <td>                
+                <a class="btn btn-warning btn-circle" href="{% url 'home:updatepsb' siswa.id %}" title="Update"><i class="fas fa-edit"></i></a>
+                <a class="btn btn-danger btn-circle" href="{% url 'home:deletepsb' siswa.id %}"  title="Delete"><i class="fas fa-trash"></i></a>
+              </td>
+
+            </tr>
+
+
+
+
+
+            
+            {% endfor %}
+
+            
+
+            
+            
+
+          </tbody>
+        </table>
+
+
+
+      </div>
     </div>
   </div>
 

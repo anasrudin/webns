@@ -32,7 +32,7 @@ DEBUG = True
 
 import dj_database_url
 
-ALLOWED_HOSTS = ['nuurussalaam.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['nuurussalaam.herokuapp.com','127.0.0.1', '192.168.2.161']
 # ALLOWED_HOSTS = []
 
 

@@ -107,10 +107,10 @@ def list(request):
     # Generate counts of some of the main objects
     num_siswa = DataSiswa.objects.count()
     datasiswa = DataSiswa.objects.all()
-
+    
 
     context = {
-    'page_title': 'Rlist pendaftar',
+    'page_title': 'List pendaftar',
     'num_siswa':num_siswa,
     'datasiswa':datasiswa,
     }
