@@ -10,4 +10,6 @@ urlpatterns = [
     path('', views.index, name='indexKeuangan'),
     path('inputTransaksi/', views.inputTransaksi, name='inputTransaksi'),
     path('daftarTransaksi/', views.daftarTransaksi, name='daftarTransaksi'),
+    # path('deleteTransaksi/', views.deleteTransaksi, name='deleteTransaksi'),
+    url(r'^deleteTransaksi/(?P<id>[0-9]+)$', views.deleteTransaksi, name='deleteTransaksi'),
 ]

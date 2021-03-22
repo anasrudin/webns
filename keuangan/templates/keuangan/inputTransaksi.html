@@ -1,19 +1,48 @@
 {% extends "admin.html" %}
 {% load static %}
 {% block content %}
+
+{% load bootstrap5 %}
 <div class="container-fluid">
 
   <!-- Page Heading -->
-  <h1 class="h3 mb-2 text-gray-800">User</h1>
+  <h1 class="h3 mb-2 text-gray-800">Tambah Transaksi</h1>
 
   <!-- DataTales Example -->
   <div class="card shadow mb-4">
     <div class="card-header py-3">
-      <h6 class="m-0 font-weight-bold text-primary">Data User</h6>
+      <h6 class="m-0 font-weight-bold text-primary">Data Keterangan Transaksi</h6>
     </div>
-    <div class="card-body">
-      <a class="btn btn-primary" href="" style="float:right;"><i class="fas fa-pen"></i>Add User</a>
+
+
+    <div class="container-fluid">
+      <div class="card-body">
+        <form method='POST' id="postingForm" action="" method="post" autocomplete="off">
+          {% csrf_token %}
+          
+          
+          <div class="form-group">
+
+            {% bootstrap_field formInput.kodetransaksi layout='horizontal' size='sm' %}
+            {% bootstrap_field formInput.jenistransaksi layout='horizontal' size='sm' %}
+            {% bootstrap_field formInput.nominal layout='horizontal' size='sm' %}
+            {% bootstrap_field formInput.keterangan layout='horizontal' size='sm' %}
+
+          </div>
+          <div class="card-body">
+            <button class='btn btn-primary' style="float:right;" type="Submit">Tambah Transaksi</button>
+
+          </form>
+        </div>
+      </div>
     </div>
+
+
+
+
+
+
+
   </div>
 
 </div>

@@ -12,32 +12,38 @@
       <h6 class="m-0 font-weight-bold text-primary">Data Posting</h6>
     </div>
     <div class="card-body">
-      <a class="btn btn-primary" href="#" style="float:right;"><i class="fas fa-pen"></i>Add Posting</a>
+      <a class="btn btn-primary" href="{% url 'keuangan:inputTransaksi' %}" style="float:right;"><i class="fas fa-pen"></i>Tambah Transaksi</a>
       <div class="table-responsive">
         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
           <thead>
             <tr>
               <th>No</th>
-              <th>Kode Akun</th>
-              <th>Nama Akun</th>
-              <th>Nama Posting</th>
-              <th>Jenis Transaksi</th>
-              <th>Action</th>
+              <th>Kode Transaksi</th>
+              <th>Jenis</th>
+              <th>Nominal</th>
+              <th>Keterangan</th>
+              <th>Aksi</th>
             </tr>
           </thead>
           <tbody>
-            {% for posting in getPosting %}
+            {% for posting in datatransaksi %}
               <tr>
               <th scope="row">{{forloop.counter}}</th>
+              <th scope="row">{{posting.kodetransaksi}}</th>
+              <th scope="row">{{posting.jenistransaksi}}</th>
+              <th scope="row" >{{posting.nominal}}</th>
+              <th scope="row">{{posting.keterangan}}</th>
    
               <td>                
-                <a class="btn btn-warning btn-circle" href="{% url 'masterdata:updatePosting' posting.id %}" title="Update"><i class="fas fa-edit"></i></a>
-                <a class="btn btn-danger btn-circle" href="{% url 'masterdata:deletePosting' posting.id %}" title="Delete"><i class="fas fa-trash"></i></a>
+                <a class="btn btn-danger btn-circle" href="{% url 'keuangan:deleteTransaksi' posting.id %}" title="Delete"><i class="fas fa-trash"></i></a>
 </td>
+
               </tr>
             {% endfor %}
           </tbody>
         </table>
+
+        <p>Saldo Rp:  {{saldototal}} </p>
       </div>
     </div>
   </div>
