@@ -106,7 +106,7 @@ def sukses(request):
 def list(request):
     # Generate counts of some of the main objects
     num_siswa = DataSiswa.objects.count()
-    datasiswa = DataSiswa.objects.all()
+    datasiswa = DataSiswa.objects.all().filter(statussiswa="Pendaftar")
     
 
     context = {

@@ -7,9 +7,9 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 
 
-from .models import ScoreSiswa
+from .models import ScoreSiswa, KehadiranSiswa
 
-
+from datetime import datetime, timedelta
 
 
 from home.models import DataSiswa
@@ -60,14 +60,21 @@ def pelanggaran(request):
 
 @login_required(login_url='/login/')
 def kehadiran(request):
+	model1 = apps.get_model('home', 'DataSiswa')
+	# datasiswa = model1.objects.all().filter(statussiswa="Aktif")
+	# datasiswa = KehadiranSiswa.objects.all().filter(statussiswa="Aktif")
+	datasiswa = KehadiranSiswa.objects.all()
 
+	tanggal = datetime.now()
 	# num_siswa = DataSiswa.objects.count()
-	model = apps.get_model('home', 'DataSiswa')
-	num_siswa = model.objects.count()
+	# model = apps.get_model('home', 'DataSiswa')
+	# num_siswa = model.objects.count()
+	# tanggal = KehadiranSiswa.objects.all()
 	context = {
 		"page_title":"Kehadiran Siswa",
 		'nbar': 'kehadiran',
-		'num_siswa':num_siswa,
+		'datasiswa':datasiswa,
+		'tanggal':tanggal,
 	}
 	return render(request, 'kesiswaan/kehadiran.html', context)
 
@@ -75,17 +82,17 @@ def kehadiran(request):
 @login_required(login_url='/login/')
 def daftarSiswa(request):
 	model1 = apps.get_model('home', 'DataSiswa')
-	model2 = apps.get_model('home', 'DataKegiatan')
+	# kehadiran = apps.get_model('home', 'DataSiswa')
 
 	sis = ScoreSiswa.objects.all()
 	
 
-	datasiswa = model1.objects.all()
-	datakegiatan = model2.objects.all().filter(statussiswa="Aktif")
-	report = list(chain(datasiswa, datakegiatan))
+	datasiswa = model1.objects.all().filter(statussiswa="Aktif")
+	# datakegiatan = model2.objects.all().filter(statussiswa="Aktif")
+	# report = list(chain(datasiswa, datakegiatan))
 
 
-	sis_count = datakegiatan.values_list('pk', flat=True)
+	sis_count = datasiswa.values_list('pk', flat=True)
 	# sis_count = model2.objects.count()
 	# sis_count = datakegiatan.values().id
 
@@ -104,8 +111,6 @@ def daftarSiswa(request):
 		"page_title":"Daftar Siswa",
 		'nbar': 'daftarSiswa',
 		'datasiswa':datasiswa,
-		'datakegiatan':datakegiatan,
-		'report':report,
 		'sis':sis,
 		'sis_count':sis_count,
 	}

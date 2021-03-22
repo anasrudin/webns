@@ -76,7 +76,19 @@
               {%csrf_token%}
 
               <h3>Data Pribadi</h3>
-              {% bootstrap_form form1 layout='horizontal' size='sm' %}
+              {% bootstrap_field form1.nama layout='horizontal' size='sm' %}
+              {% bootstrap_field form1.nisn layout='horizontal' size='sm' %}
+              {% bootstrap_field form1.nik layout='horizontal' size='sm' %}
+              {% bootstrap_field form1.tempatlahir layout='horizontal' size='sm' %}
+              {% bootstrap_field form1.tanggallahir layout='horizontal' size='sm' %}
+              {% bootstrap_field form1.jeniskelamin layout='horizontal' size='sm' %}
+              {% bootstrap_field form1.hobi layout='horizontal' size='sm' %}
+              {% bootstrap_field form1.citacita layout='horizontal' size='sm' %}
+              {% bootstrap_field form1.anakke layout='horizontal' size='sm' %}
+              {% bootstrap_field form1.jumlahsaudara layout='horizontal' size='sm' %}
+              {% bootstrap_field form1.sekolahasal layout='horizontal' size='sm' %}
+              {% bootstrap_field form1.hp layout='horizontal' size='sm' %}
+              {% bootstrap_field form1.email layout='horizontal' size='sm' %}
               <hr class="my-4">
               
               <h3>Data Sekolah/Madrasah Sebelumnya</h3>

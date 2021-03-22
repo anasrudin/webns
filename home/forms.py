@@ -28,6 +28,11 @@ class DataSiswaForm(forms.ModelForm):
 		'sekolahasal' : forms.TextInput(attrs={'class':'form-control'}),
 		'hp': forms.TextInput(attrs={'class':'form-control'}),
 		'email': forms.TextInput(attrs={'class':'form-control'}),
+		'statussiswa' : forms.Select(attrs={'class':'form-control'}),
+		'tahunmasuk' : forms.TextInput(attrs={'class':'form-control'}),
+		'nislokal' : forms.TextInput(attrs={'class':'form-control'}),
+		'kelas' : forms.Select(attrs={'class':'form-control'}),
+		'jurusan' : forms.Select(attrs={'class':'form-control'}),
 
 
 		}
@@ -46,6 +51,12 @@ class DataSiswaForm(forms.ModelForm):
 		'sekolahasal' : 'Madrasah / Sekolah Asal *',
 		'hp': 'No HP / WA *',
 		'email': 'Email',
+		'statussiswa' : 'Status Siswa',
+		'tahunmasuk' : 'Tahun Masuk',
+		'nislokal' : 'NIS Lokal',
+		'kelas' : 'Kelas',
+		'jurusan' : 'Jurusan',
+
 		}
 		use_required_attribute = True
 
@@ -63,6 +74,12 @@ class DataSiswaForm(forms.ModelForm):
 		self.fields['sekolahasal'].widget.attrs['placeholder'] = 'Madrasah/Sekolah asal. Misal : MTsN Kota Bandung'
 		self.fields['hp'].widget.attrs['placeholder'] = 'No HP / WA Aktif'
 		self.fields['email'].widget.attrs['placeholder'] = 'Kosongkan jika tidak memiliki Email'
+		self.fields['statussiswa'].required = False
+		self.fields['tahunmasuk'].required = False
+		self.fields['nislokal'].required = False
+		self.fields['kelas'].required = False
+		self.fields['jurusan'].required = False
+
 
 
 
@@ -233,32 +250,20 @@ class DataKegiatanForm(forms.ModelForm):
 		fields = '__all__'
 		widget = { 
 		'motivasi' : forms.TextInput(attrs={'class':'form-control'}),
-		'statussiswa' : forms.Select(attrs={'class':'form-control'}),
-		'tahunmasuk' : forms.TextInput(attrs={'class':'form-control'}),
-		'nislokal' : forms.TextInput(attrs={'class':'form-control'}),
-		'kelas' : forms.Select(attrs={'class':'form-control'}),
-		'jurusan' : forms.Select(attrs={'class':'form-control'}),
+		
+
+
 		'poinpelanggaran' : forms.TextInput(attrs={'class':'form-control'}),
 		'pinjamanbuku' : forms.TextInput(attrs={'class':'form-control'}),
 		}
 		labels = {
 		'motivasi' : 'Motivasi*',
-		'statussiswa' : 'Status Siswa',
-		'tahunmasuk' : 'Tahun Masuk',
-		'nislokal' : 'NIS Lokal',
-		'kelas' : 'Kelas',
-		'jurusan' : 'Jurusan',
 		'poinpelanggaran' : 'Poin Pelanggaran',
 		'pinjamanbuku' : 'Jumlah Pinjaman Buku',
 		}
 	def __init__(self, *args, **kwargs):
 		super(DataKegiatanForm, self).__init__(*args, **kwargs)
 		self.fields['motivasi'].widget.attrs['placeholder'] = 'Tulis alasan/motivasi anda ingin bersekolah di MA Nuurus Salaam'
-		self.fields['statussiswa'].required = False
-		self.fields['tahunmasuk'].required = False
-		self.fields['nislokal'].required = False
-		self.fields['kelas'].required = False
-		self.fields['jurusan'].required = False
 		self.fields['poinpelanggaran'].required = False
 		self.fields['pinjamanbuku'].required = False
 
