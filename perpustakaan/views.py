@@ -7,6 +7,13 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 
 
+from .forms import BukuForm, PinjamForm
+from .models import Buku, Pinjam
+
+
+
+
+from django.contrib import messages
 
 # Create your views here.
 # @login_required(login_url='/login/')
@@ -36,39 +43,72 @@ def indexPerpustakaan(request):
 
 @login_required(login_url='/login/')
 def transaksiPeminjaman(request):
+	datapinjam = Pinjam.objects.all()
 	context = {
 		'page_title':'Transaksi Peminjaman',
 		'nbar': 'transaksiPeminjaman',
+		'datapinjam':datapinjam,
+
 	}
 	return render(request, 'perpustakaan/transaksi.html', context)
 
 
 @login_required(login_url='/login/')
 def katalogPeminjaman(request):
+	databuku = Buku.objects.all()
 	context = {
 		'page_title':'Katalog Peminjaman',
 		'nbar': 'katalogPeminjaman',
+		'databuku':databuku,
 	}
 	return render(request, 'perpustakaan/katalog.html', context)
 
 
 @login_required(login_url='/login/')
 def peminjaman(request):
+	formInput = PinjamForm(request.POST or None)
+	if request.method == 'POST':
+		if formInput.is_valid():
+			formInput.save()
+			messages.success(request, 'Data Buku berhasil dibuat')
+		return redirect('keuangan:inputTransaksi')
+
 	context = {
 		'page_title':'Peminjaman Buku',
 		'nbar': 'peminjamanBuku',
+		'formInput':formInput,
 	}
 	return render(request, 'perpustakaan/pinjam.html', context)
 
 
 
 @login_required(login_url='/login/')
-def pengembalian(request):
+def tambahbuku(request):
+	formInput = BukuForm(request.POST or None)
+	if request.method == 'POST':
+		if formInput.is_valid():
+			formInput.save()
+			messages.success(request, 'Data Pinjam berhasil dibuat')
+		return redirect('keuangan:inputTransaksi')
+
+
 	context = {
-		'page_title':'Pengembalian Buku',
-		'nbar': 'pengembalianBuku',
+		'page_title':'tambahbuku Buku',
+		'nbar': 'tambahbuku',
+		'formInput':formInput,
 	}
 	return render(request, 'perpustakaan/kembali.html', context)
+
+
+
+
+
+
+
+
+
+
+
 
 
 

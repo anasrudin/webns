@@ -20,17 +20,24 @@
             <tr>
               <th>No</th>
               <th>Kode Buku</th>
-              <th>Judul Buku</th>
-              <th>Jumlah Pinjam</th>
+              <th>NIS</th>
+              <th>Nama Peminjam</th>
               <th>Tanggal Pinjam</th>
               <th>Tanggal Kembali</th>
               <th>Aksi</th>
             </tr>
           </thead>
           <tbody>
-            {% for posting in getPosting %}
+            {% for posting in datapinjam %}
             <tr>
               <th scope="row">{{forloop.counter}}</th>
+              <th scope="row">{{posting.buku.all.0.judulbuku}} - {{posting.buku.all.0.kodebuku}}</th>
+              <th scope="row">{{posting.nislokal}}</th>
+              <th scope="row">{{posting.nama}}</th>
+              <th scope="row">{{posting.tanggalpinjam}}</th>
+              <th scope="row">{{posting.tanggalkembali}}</th>
+
+
 
               <td>                
                 <a class="btn btn-warning btn-circle" href="#" title="Update"><i class="fas fa-edit"></i></a>

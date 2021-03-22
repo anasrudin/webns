@@ -5,7 +5,7 @@
 <div class="container-fluid">
 
   <!-- Page Heading -->
-  <h1 class="h3 mb-2 text-gray-800">Katalog Peminjaman</h1>
+  <h1 class="h3 mb-2 text-gray-800">Katalog Buku</h1>
 
   <!-- DataTales Example -->
   <div class="card shadow mb-4">
@@ -22,14 +22,16 @@
               <th>Kode Buku</th>
               <th>Judul Buku</th>
               <th>Pengarang</th>
-              <th>Stok</th>
               <th>Aksi</th>
             </tr>
           </thead>
           <tbody>
-            {% for posting in getPosting %}
+            {% for posting in databuku %}
               <tr>
               <th scope="row">{{forloop.counter}}</th>
+              <th scope="row">{{posting.kodebuku}}</th>
+              <th scope="row">{{posting.judulbuku}}</th>
+              <th scope="row">{{posting.pengarang}}</th>
 
               <td>                
                 <a class="btn btn-warning btn-circle" href="#" title="Update"><i class="fas fa-edit"></i></a>

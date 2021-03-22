@@ -2,6 +2,9 @@
 {% load static %}
 {% block content %}
 
+
+{% load bootstrap5 %}
+
 <div class="container-fluid">
 
   <!-- Page Heading -->
@@ -15,31 +18,45 @@
     
 
     <div class="container-fluid">
-      <form>
 
-        <div class="form-group">
-          <label for="formGroupExampleInput">Nomor Induk Siswa</label>
-          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="NIS">
-        </div>
-        <div class="form-group">
-          <label for="formGroupExampleInput2">Nama</label>
-          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Nama">
-        </div>
-        <div class="form-group">
-          <label for="formGroupExampleInput2">Kode Buku</label>
-          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Kode Buku">
-        </div>
-        <div class="form-group">
-          <label for="formGroupExampleInput2">Tanggal Pinjam</label>
-          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="tanggal">
-        </div>
-        <div class="form-group">
-          <label for="formGroupExampleInput2">Tanggal Kembali</label>
-          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="tanggal">
-        </div>
 
-        <button type="submit" class="btn btn-primary">Pinjam</button>
-      </form>
+
+
+    <div class="container-fluid">
+      <div class="card-body">
+        <form method='POST' id="postingForm" action="" method="post" autocomplete="off">
+          {% csrf_token %}
+          
+          
+          <div class="form-group">
+
+            {% bootstrap_field formInput.nislokal layout='horizontal' size='sm' %}
+            {% bootstrap_field formInput.nama layout='horizontal' size='sm' %}
+            {% bootstrap_field formInput.buku layout='horizontal' size='sm' %}
+            {% bootstrap_field formInput.tanggalpinjam layout='horizontal' size='sm' %}
+            {% bootstrap_field formInput.tanggalkembali layout='horizontal' size='sm' %}
+
+
+
+          </div>
+          <div class="card-body">
+            <button class='btn btn-primary' style="float:right;" type="Submit">Pinjam Buku</button>
+
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
 
 
     </div>
