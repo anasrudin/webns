@@ -114,9 +114,15 @@ def tambahbuku(request):
 
 @login_required(login_url='/login/')
 def daftarDenda(request):
+	datadenda = Pinjam.objects.all()
+
+	# startdate = date.today()
+ #    enddate = startdate + timedelta(days=6)
+ #    Sample.objects.filter(date__range=[startdate, enddate])
 	context = {
 		'page_title':'Daftar Denda',
 		'nbar': 'daftarDenda',
+		'datadenda':datadenda,
 	}
 	return render(request, 'perpustakaan/denda.html', context)
 

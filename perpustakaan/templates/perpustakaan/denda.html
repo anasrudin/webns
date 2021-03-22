@@ -10,32 +10,40 @@
   <!-- DataTales Example -->
   <div class="card shadow mb-4">
     <div class="card-header py-3">
-      <h6 class="m-0 font-weight-bold text-primary">Daftar Denda</h6>
+      <h6 class="m-0 font-weight-bold text-primary">Data Peminjam yang melebihi batas waktu</h6>
     </div>
     <div class="card-body">
-      <a class="btn btn-primary" href="#" style="float:right;"><i class="fas fa-pen"></i>Add Buku</a>
+      <a class="btn btn-primary" href="#" style="float:right;"><i class="fas fa-pen"></i>Add Transaksi</a>
       <div class="table-responsive">
         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
           <thead>
             <tr>
               <th>No</th>
               <th>Kode Buku</th>
-              <th>Judul Buku</th>
-              <th>Pengarang</th>
-              <th>Stok</th>
+              <th>NIS</th>
+              <th>Nama Peminjam</th>
+              <th>Tanggal Pinjam</th>
+              <th>Tanggal Kembali</th>
               <th>Aksi</th>
             </tr>
           </thead>
           <tbody>
-            {% for posting in getPosting %}
-              <tr>
+            {% for posting in datadenda %}
+            <tr>
               <th scope="row">{{forloop.counter}}</th>
+              <th scope="row">{{posting.buku.all.0.judulbuku}} - {{posting.buku.all.0.kodebuku}}</th>
+              <th scope="row">{{posting.nislokal}}</th>
+              <th scope="row">{{posting.nama}}</th>
+              <th scope="row">{{posting.tanggalpinjam}}</th>
+              <th scope="row">{{posting.tanggalkembali}}</th>
+
+
 
               <td>                
                 <a class="btn btn-warning btn-circle" href="#" title="Update"><i class="fas fa-edit"></i></a>
                 <a class="btn btn-danger btn-circle" href="#" title="Delete"><i class="fas fa-trash"></i></a>
-</td>
-              </tr>
+              </td>
+            </tr>
             {% endfor %}
           </tbody>
         </table>
