@@ -24,6 +24,7 @@
               <th>Nama Peminjam</th>
               <th>Tanggal Pinjam</th>
               <th>Tanggal Kembali</th>
+              <th>Denda</th>
               <th>Aksi</th>
             </tr>
           </thead>
@@ -36,12 +37,12 @@
               <th scope="row">{{posting.nama}}</th>
               <th scope="row">{{posting.tanggalpinjam}}</th>
               <th scope="row">{{posting.tanggalkembali}}</th>
+              <th scope="row">Rp {{posting.nominaldenda}}</th>
 
 
 
               <td>                
-                <a class="btn btn-warning btn-circle" href="#" title="Update"><i class="fas fa-edit"></i></a>
-                <a class="btn btn-danger btn-circle" href="#" title="Delete"><i class="fas fa-trash"></i></a>
+                <a class="btn btn-warning btn-circle" href="{% url 'perpustakaan:updatePinjam' posting.id %}" title="Update"><i class="fas fa-edit"></i></a>
               </td>
             </tr>
             {% endfor %}

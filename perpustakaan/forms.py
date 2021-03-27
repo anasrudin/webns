@@ -37,12 +37,15 @@ class PinjamForm(forms.ModelForm):
 		'nislokal': forms.TextInput(attrs={'class':'form-control'}),
 		'nama': forms.TextInput(attrs={'class':'form-control'}),
 		'buku': forms.TextInput(attrs={'class':'form-control'}),
+		'statuspinjaman': forms.Select(attrs={'class':'form-control'}),
+		'nominaldenda': forms.TextInput(attrs={'class':'form-control'}),
 		}
 	def __init__(self, *args, **kwargs):
 		super(PinjamForm, self).__init__(*args, **kwargs)
 		self.fields['nama'].required = False
 		self.fields['tanggalpinjam'].widget = DateInput()
 		self.fields['tanggalkembali'].widget = DateInput()
+		self.fields['nominaldenda'].required = False
 
 
 

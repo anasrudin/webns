@@ -29,8 +29,6 @@
             <h6 class="collapse-header">Management perpustakaan:</h6>
             <a class="collapse-item {% if nbar == 'transaksiPeminjaman' %}active{% endif %}" href="{% url 'perpustakaan:transaksiPeminjaman' %}" class="no-collapsable">Transaksi Peminjaman</a>
             <a class="collapse-item" href="{% url 'perpustakaan:katalogPeminjaman' %}">Katalog Buku</a>
-            <a class="collapse-item" href="{% url 'perpustakaan:peminjamanBuku' %}">Peminjaman</a>
-            <a class="collapse-item" href="{% url 'perpustakaan:tambahbuku' %}">Tambah Buku</a>
             <a class="collapse-item" href="{% url 'perpustakaan:daftarDenda' %}">Daftar Denda</a>
           </div>
         </div>
@@ -42,7 +40,6 @@
           <div id="collapseKesiswaan" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Management Kesiswaan:</h6>
-            <a class="collapse-item" href="{% url 'kesiswaan:masterData' %}" class="no-collapsable">Master Data</a>
             <a class="collapse-item" href="{% url 'kesiswaan:pelanggaran' %}">Pelanggaran Siswa</a>
             <a class="collapse-item" href="{% url 'kesiswaan:kehadiran' %}">Kehadiran Siswa</a>
             <a class="collapse-item" href="{% url 'kesiswaan:daftarSiswa' %}">Daftar Siswa</a>
@@ -57,7 +54,6 @@
           <div id="collapseKeuangan" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Management Keuangan:</h6>
-            <a class="collapse-item" href="{% url 'keuangan:inputTransaksi' %}" class="no-collapsable">Input Transaksi</a>
             <a class="collapse-item" href="{% url 'keuangan:daftarTransaksi' %}">Daftar Pengeluaran</a>
             <a class="collapse-item" href="{% url 'keuangan:daftarInfaq' %}">Daftar Infaq</a>
           </div>

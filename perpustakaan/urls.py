@@ -13,5 +13,9 @@ urlpatterns = [
     path('pinjam/', views.peminjaman, name='peminjamanBuku'),
     path('tambahbuku/', views.tambahbuku, name='tambahbuku'),
     path('denda/', views.daftarDenda, name='daftarDenda'),
+    url(r'^deleteBuku/(?P<id>[0-9]+)$', views.deleteBuku, name='deleteBuku'),
+    url(r'^deletePinjam/(?P<id>[0-9]+)$', views.deletePinjam, name='deletePinjam'),
+    url(r'^updatePinjam/(?P<id>[0-9]+)$', views.updatePinjam, name='updatePinjam'),
+
 ]
 

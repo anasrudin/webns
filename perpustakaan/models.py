@@ -16,6 +16,11 @@ class Buku(models.Model):
 	def __str__(self):
 		return 'Buku: {}'.format(' ' + self.judulbuku +' (' +self.kodebuku +') ')
 
+pilihan_statusbuku = (
+	("Dipinjam","Dipinjam"),
+	("Dikembalikan","Dikembalikan"),
+	("Denda","Denda")
+	)
 
 class Pinjam(models.Model):
 	buku =  models.ManyToManyField(Buku)
@@ -23,3 +28,5 @@ class Pinjam(models.Model):
 	nama =  models.CharField(max_length=255)
 	tanggalpinjam = models.DateField()
 	tanggalkembali = models.DateField()
+	statuspinjaman =  models.CharField(max_length=255, choices=pilihan_statusbuku, default="Dipinjam")
+	nominaldenda =  models.IntegerField(null=True, blank=True, default=0)

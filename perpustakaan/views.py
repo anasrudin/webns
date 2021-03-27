@@ -12,8 +12,16 @@ from .models import Buku, Pinjam
 
 
 
+# time filter
+from datetime import datetime, timedelta
+from django.utils import timezone
+
+
 
 from django.contrib import messages
+
+
+from django.shortcuts import get_list_or_404, get_object_or_404
 
 # Create your views here.
 # @login_required(login_url='/login/')
@@ -71,7 +79,7 @@ def peminjaman(request):
 		if formInput.is_valid():
 			formInput.save()
 			messages.success(request, 'Data Buku berhasil dibuat')
-		return redirect('keuangan:inputTransaksi')
+		return redirect('perpustakaan:transaksiPeminjaman')
 
 	context = {
 		'page_title':'Peminjaman Buku',
@@ -89,7 +97,7 @@ def tambahbuku(request):
 		if formInput.is_valid():
 			formInput.save()
 			messages.success(request, 'Data Pinjam berhasil dibuat')
-		return redirect('keuangan:inputTransaksi')
+		return redirect('perpustakaan:katalogPeminjaman')
 
 
 	context = {
@@ -103,18 +111,12 @@ def tambahbuku(request):
 
 
 
-
-
-
-
-
-
-
-
-
 @login_required(login_url='/login/')
 def daftarDenda(request):
-	datadenda = Pinjam.objects.all()
+	time_threshold = datetime.now()
+	# tanggalkembali
+	# datadenda = Pinjam.objects.all()
+	datadenda = Pinjam.objects.filter(tanggalkembali__lt=time_threshold)
 
 	# startdate = date.today()
  #    enddate = startdate + timedelta(days=6)
@@ -126,5 +128,41 @@ def daftarDenda(request):
 		'datadenda':datadenda,
 	}
 	return render(request, 'perpustakaan/denda.html', context)
+
+
+
+
+@login_required(login_url='/login/')
+def deleteBuku(request, id):
+	Buku.objects.filter(id=id).delete()
+	messages.success(request, 'Data Buku berhasil didelete')
+	return redirect('perpustakaan:katalogPeminjaman')
+
+
+@login_required(login_url='/login/')
+def deletePinjam(request, id):
+	Pinjam.objects.filter(id=id).delete()
+	messages.success(request, 'Data Pinjaman berhasil didelete')
+	return redirect('perpustakaan:transaksiPeminjaman')
+
+
+
+
+
+@login_required(login_url='/login/')
+def updatePinjam(request, id):
+	instanceModel1 = get_object_or_404(Pinjam, id=id)
+	formInput = PinjamForm(request.POST or None, instance=instanceModel1)
+	if formInput.is_valid():
+		profile1 = formInput.save(commit=False)
+		profile1.save()
+		messages.success(request, f"Success")
+		return redirect('perpustakaan:transaksiPeminjaman')
+
+	return render(request, 'perpustakaan/updatepinjam.html', {'formInput':formInput})
+
+
+
+
 
 

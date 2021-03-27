@@ -13,4 +13,6 @@ urlpatterns = [
     path('kehadiran/', views.kehadiran, name='kehadiran'),
     path('daftarSiswa/', views.daftarSiswa, name='daftarSiswa'),
     path('tambahPelanggar/', views.tambahPelanggar, name='tambahPelanggar'),
+    url(r'^deletePelanggar/(?P<id>[0-9]+)$', views.deletePelanggar, name='deletePelanggar'),
+    url(r'^updatePelanggar/(?P<id>[0-9]+)$', views.updatePelanggar, name='updatePelanggar'),
 ]

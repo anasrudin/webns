@@ -26,6 +26,9 @@ from operator import attrgetter
 # from django.db.models.query import QuerySet
 
 
+from django.shortcuts import get_list_or_404, get_object_or_404
+
+
 # Create your views here.
 @login_required(login_url='/login/')
 def index(request):
@@ -152,18 +155,27 @@ def tambahPelanggar(request):
 	}
 	return render(request, 'kesiswaan/tambahpelanggar.html', context)
 
-	# formInput = KasForm(request.POST or None)
-
-	# if request.method == 'POST':
-	# 	if formInput.is_valid():
-	# 		formInput.save()
-	# 		messages.success(request, 'Data Posting berhasil dibuat')
-	# 	return redirect('keuangan:daftarTransaksi')
+@login_required(login_url='/login/')
+def deletePelanggar(request, id):
+    ScoreSiswa.objects.filter(id=id).delete()
+    messages.success(request, 'Data Pelanggar berhasil didelete')
+    return redirect('kesiswaan:pelanggaran')
 
 
-	# context = {
-	# 	"page_title":"Input Transaksi",
-	# 	'nbar': 'inputTransaksi',
-	# 	'formInput':formInput,
-	# }
-	# return render(request, 'keuangan/inputTransaksi.html', context)
+@login_required(login_url='/login/')
+def updatePelanggar(request, id):
+    # ScoreSiswa.objects.filter(id=id).delete()
+    # messages.success(request, 'Data Pelanggar berhasil didelete')
+    # return redirect('kesiswaan:pelanggaran')
+    instanceModel1 = get_object_or_404(ScoreSiswa, id=id)
+    formInput = ScoreSiswaForm(request.POST or None, instance=instanceModel1)
+    if formInput.is_valid():
+    	profile1 = formInput.save(commit=False)
+    	profile1.save()
+    	messages.success(request, f"Success")
+    	return redirect('kesiswaan:pelanggaran')
+    return render(request, 'kesiswaan/tambahpelanggar.html', {'formInput':formInput})
+
+
+
+
