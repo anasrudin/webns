@@ -15,7 +15,7 @@
       <h6 class="m-0 font-weight-bold text-primary">Data Siswa Aktif</h6>
     </div>
     <div class="card-body">
-      <a class="btn btn-primary" href="#" style="float:right;"><i class="fas fa-pen"></i>Add Transaksi</a>
+      <a class="btn btn-primary" href="{% url 'kesiswaan:export_datasiswa_xls' %}" style="float:right;"><i class="fas fa-print"></i>Download Daftar Siswa</a>
       <div class="table-responsive">
         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
           <thead>
