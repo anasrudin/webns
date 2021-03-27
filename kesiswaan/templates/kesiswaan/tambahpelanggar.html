@@ -1,0 +1,52 @@
+{% extends "admin.html" %}
+{% load static %}
+{% block content %}
+
+{% load bootstrap5 %}
+<div class="container-fluid">
+
+  <!-- Page Heading -->
+  <h1 class="h3 mb-2 text-gray-800">Tambah Pelanggaran</h1>
+
+  <!-- DataTales Example -->
+  <div class="card shadow mb-4">
+    <div class="card-header py-3">
+      <h6 class="m-0 font-weight-bold text-primary">Data Siswa Pelanggar</h6>
+    </div>
+
+
+
+
+    <div class="container-fluid">
+      <div class="card-body">
+        <form method='POST' id="postingForm" action="" method="post" autocomplete="off">
+          {% csrf_token %}
+          
+          
+          <div class="form-group">
+
+            {% bootstrap_field formInput.nama layout='horizontal' size='sm' %}
+            {% bootstrap_field formInput.nislokal layout='horizontal' size='sm' %}
+            {% bootstrap_field formInput.skorpelanggaran layout='horizontal' size='sm' %}
+            {% bootstrap_field formInput.tanggalpelanggaran layout='horizontal' size='sm' %}
+            {% bootstrap_field formInput.keterangan layout='horizontal' size='sm' %}
+ 
+
+          </div>
+          <div class="card-body">
+            <button class='btn btn-primary' style="float:right;" type="Submit">Tambah Pelanggar</button>
+
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+  </div>
+
+</div>
+{% endblock %}

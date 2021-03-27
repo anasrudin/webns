@@ -6,7 +6,7 @@ from django.contrib.auth.decorators import login_required
 
 from django.contrib.auth.models import User
 
-
+from .forms import ScoreSiswaForm
 from .models import ScoreSiswa, KehadiranSiswa
 
 from datetime import datetime, timedelta
@@ -14,6 +14,10 @@ from datetime import datetime, timedelta
 
 from home.models import DataSiswa
 from django.apps import apps
+
+
+
+from django.contrib import messages
 
 # combine query set
 from itertools import chain
@@ -52,11 +56,24 @@ def masterData(request):
 
 @login_required(login_url='/login/')
 def pelanggaran(request):
+	datapelanggar = ScoreSiswa.objects.all()
 	context = {
 		"page_title":"Pelanggaran Siswa",
 		'nbar': 'pelanggaran',
+		'datapelanggar':datapelanggar,
 	}
 	return render(request, 'kesiswaan/pelanggaran.html', context)
+
+
+
+
+
+
+
+
+
+
+
 
 @login_required(login_url='/login/')
 def kehadiran(request):
@@ -119,3 +136,34 @@ def daftarSiswa(request):
 	return render(request, 'kesiswaan/daftarSiswa.html', context)
 
 
+@login_required(login_url='/login/')
+def tambahPelanggar(request):
+	formInput = ScoreSiswaForm(request.POST or None)
+	if request.method == 'POST':
+		if formInput.is_valid():
+			formInput.save()
+			messages.success(request, 'Data Pelanggaran berhasil dibuat')
+		return redirect('kesiswaan:pelanggaran')
+	
+	context = {
+		"page_title":"Tambah Pelanggar",
+		'nbar': 'tambahPelanggar',
+		'formInput':formInput,
+	}
+	return render(request, 'kesiswaan/tambahpelanggar.html', context)
+
+	# formInput = KasForm(request.POST or None)
+
+	# if request.method == 'POST':
+	# 	if formInput.is_valid():
+	# 		formInput.save()
+	# 		messages.success(request, 'Data Posting berhasil dibuat')
+	# 	return redirect('keuangan:daftarTransaksi')
+
+
+	# context = {
+	# 	"page_title":"Input Transaksi",
+	# 	'nbar': 'inputTransaksi',
+	# 	'formInput':formInput,
+	# }
+	# return render(request, 'keuangan/inputTransaksi.html', context)

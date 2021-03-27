@@ -10,13 +10,20 @@ from home.models import DataKegiatan
 
 
 from home.models import DataSiswa
+
+
+from django.utils.timezone import now
 # Create your models here.
 
 
 class ScoreSiswa(models.Model):
-	siswa_id = models.ForeignKey(DataKegiatan, on_delete=models.CASCADE, null=True, blank=True)
+	# siswa_id = models.ForeignKey(DataKegiatan, on_delete=models.CASCADE, null=True, blank=True)
+	nama =  models.CharField(max_length=255)
+	nislokal =  models.CharField(max_length=255)
 	skorpelanggaran = models.IntegerField()
-	kehadiransiswa = models.IntegerField()
+	# kehadiransiswa = models.IntegerField()
+	tanggalpelanggaran = models.DateField(default=now, blank=True)
+	keterangan =  models.CharField(max_length=255, null=True, blank=True)
 
 
 pilihan_hadir = (
