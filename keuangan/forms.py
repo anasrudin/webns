@@ -1,6 +1,15 @@
 from django import forms
 from .models import Kas
 
+class DateInput(forms.DateInput):
+    input_type = "date"
+
+    def __init__(self, **kwargs):
+        kwargs["format"] = "%Y-%m-%d"
+        super().__init__(**kwargs)
+
+
+
 class KasForm(forms.ModelForm):
 	class Meta:
 		model = Kas
@@ -22,3 +31,4 @@ class KasForm(forms.ModelForm):
 	def __init__(self, *args, **kwargs):
 		super(KasForm, self).__init__(*args, **kwargs)
 		self.fields['saldo'].required = False
+		self.fields['tanggaltransaksi'].widget = DateInput()

@@ -41,7 +41,7 @@ def inputTransaksi(request):
 		if formInput.is_valid():
 			formInput.save()
 			messages.success(request, 'Data Posting berhasil dibuat')
-		return redirect('keuangan:inputTransaksi')
+		return redirect('keuangan:daftarTransaksi')
 
 
 	context = {
@@ -54,6 +54,9 @@ def inputTransaksi(request):
 @login_required(login_url='/login/')
 def daftarTransaksi(request):
 	datatransaksi = Kas.objects.all()
+	datauangkeluar = Kas.objects.all().filter(jenistransaksi="Pengeluaran")
+	datauanginfaq = Kas.objects.all().filter(jenistransaksi="Infaq")
+
 	# saldototal = Kas.objects.aggregate(Sum('saldo'))
 	saldototal = sum(datatransaksi.values_list('saldo', flat=True))
 
@@ -62,8 +65,37 @@ def daftarTransaksi(request):
 		'nbar': 'daftarTransaksi',
 		'datatransaksi':datatransaksi,
 		'saldototal':saldototal,
+		'datauangkeluar':datauangkeluar,
+		'datauanginfaq':datauanginfaq,
 	}
 	return render(request, 'keuangan/daftarTransaksi.html', context)
+
+
+@login_required(login_url='/login/')
+def daftarInfaq(request):
+	datatransaksi = Kas.objects.all()
+	datauangkeluar = Kas.objects.all().filter(jenistransaksi="Pengeluaran")
+	datauanginfaq = Kas.objects.all().filter(jenistransaksi="Infaq")
+
+	# saldototal = Kas.objects.aggregate(Sum('saldo'))
+	saldototal = sum(datatransaksi.values_list('saldo', flat=True))
+
+	context = {
+		"page_title":"Daftar Transaksi",
+		'nbar': 'daftarTransaksi',
+		'datatransaksi':datatransaksi,
+		'saldototal':saldototal,
+		'datauangkeluar':datauangkeluar,
+		'datauanginfaq':datauanginfaq,
+	}
+	return render(request, 'keuangan/daftarInfaq.html', context)
+
+
+
+
+
+
+
 
 
 @login_required(login_url='/login/')

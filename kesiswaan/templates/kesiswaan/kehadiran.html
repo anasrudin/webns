@@ -9,6 +9,7 @@
 
   <p>Absensi Siswa Tanggal : {{ tanggal }} </p>
 
+
   <!-- DataTales Example -->
   <div class="card shadow mb-4">
     <div class="card-header py-3">
@@ -22,7 +23,8 @@
             <tr>
               <th>No</th>
               <th>Nama</th>
-              <th>Kelas</th>
+              <th>Status</th>
+              <th>Catatan</th>
               <th>Aksi</th>
             </tr>
           </thead>
@@ -31,6 +33,7 @@
             <tr>
               <th scope="row">{{forloop.counter}}</th>
               <th scope="row">{{siswa.nama}}</th>
+              <th scope="row">{{siswa.catatan}}</th>
               <th scope="row">{{siswa.kelas}} - {{siswa.jurusan}}</th>
               <td>                
                 <a class="btn btn-warning btn-circle" href="{% url 'home:updatepsb' siswa.id %}" title="Update"><i class="fas fa-edit"></i></a>

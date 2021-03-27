@@ -118,6 +118,7 @@ def daftarDenda(request):
 
 	# startdate = date.today()
  #    enddate = startdate + timedelta(days=6)
+ 	
  #    Sample.objects.filter(date__range=[startdate, enddate])
 	context = {
 		'page_title':'Daftar Denda',

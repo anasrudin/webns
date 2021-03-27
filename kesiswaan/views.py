@@ -61,9 +61,9 @@ def pelanggaran(request):
 @login_required(login_url='/login/')
 def kehadiran(request):
 	model1 = apps.get_model('home', 'DataSiswa')
-	# datasiswa = model1.objects.all().filter(statussiswa="Aktif")
+	datasiswa = model1.objects.all().filter(statussiswa="Aktif")
 	# datasiswa = KehadiranSiswa.objects.all().filter(statussiswa="Aktif")
-	datasiswa = KehadiranSiswa.objects.all()
+	# datasiswa = KehadiranSiswa.objects.all()
 
 	tanggal = datetime.now()
 	# num_siswa = DataSiswa.objects.count()
@@ -92,9 +92,11 @@ def daftarSiswa(request):
 	# report = list(chain(datasiswa, datakegiatan))
 
 
-	sis_count = datasiswa.values_list('pk', flat=True)
+	# sis_count = datasiswa.values_list('pk', flat=True)
 	# sis_count = model2.objects.count()
 	# sis_count = datakegiatan.values().id
+
+	sis_count = model1.objects.all().filter(statussiswa="Aktif").count()
 
 
 	# report = list(sorted(chain(datasiswa, datakegiatan)))

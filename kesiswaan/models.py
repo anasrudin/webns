@@ -29,7 +29,8 @@ pilihan_hadir = (
 
 class KehadiranSiswa(models.Model):
 	# datasiswa = models.ForeignKey(to='home.DataSiswa', related_name='hadir', null=True, blank=True)
-	datasiswa = models.ForeignKey(DataSiswa, on_delete=models.CASCADE, null=True, blank=True)
+	# datasiswa = models.ForeignKey(DataSiswa, on_delete=models.CASCADE, null=True, blank=True)
+	datasiswa = models.ManyToManyField(DataSiswa)
 	tanggalkbm = models.DateField(auto_now=False, auto_now_add=False)
 	status = models.CharField(max_length=100, null=True, blank=True, choices=pilihan_hadir, default="Hadir")
 	catatan = models.CharField(max_length=255)

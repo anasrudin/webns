@@ -7,7 +7,7 @@ class KehadiranSiswaForm(forms.ModelForm):
 		model = KehadiranSiswa
 		fields  = '__all__'
 		widget = {
-		'status': forms.TextInput(attrs={'class':'form-control'}),
+		'status': forms.Select(attrs={'class':'form-control'}),
 		'catatan': forms.TextInput(attrs={'class':'form-control'}),
 		}
 	def __init__(self, *args, **kwargs):
