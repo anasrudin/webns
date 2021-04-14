@@ -62,7 +62,9 @@ def daftarTransaksi(request):
 	datauanginfaq = Kas.objects.all().filter(jenistransaksi="Infaq")
 
 	# saldototal = Kas.objects.aggregate(Sum('saldo'))
-	saldototal = sum(datatransaksi.values_list('saldo', flat=True))
+	saldototal = sum(datauangkeluar.values_list('nominal', flat=True))
+
+
 
 	context = {
 		"page_title":"Daftar Transaksi",
@@ -82,7 +84,9 @@ def daftarInfaq(request):
 	datauanginfaq = Kas.objects.all().filter(jenistransaksi="Infaq")
 
 	# saldototal = Kas.objects.aggregate(Sum('saldo'))
-	saldototal = sum(datatransaksi.values_list('saldo', flat=True))
+	saldototal = sum(datauanginfaq.values_list('nominal', flat=True))
+
+
 
 	context = {
 		"page_title":"Daftar Transaksi",
