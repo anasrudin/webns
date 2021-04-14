@@ -122,10 +122,13 @@ def daftarDenda(request):
  #    enddate = startdate + timedelta(days=6)
  	
  #    Sample.objects.filter(date__range=[startdate, enddate])
+
+	jumlahdenda = sum(datadenda.values_list('nominaldenda', flat=True))
 	context = {
 		'page_title':'Daftar Denda',
 		'nbar': 'daftarDenda',
 		'datadenda':datadenda,
+		'jumlahdenda':jumlahdenda,
 	}
 	return render(request, 'perpustakaan/denda.html', context)
 

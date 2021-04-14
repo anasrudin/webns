@@ -1,6 +1,7 @@
 {% extends "admin.html" %}
 {% load static %}
 {% block content %}
+{% load l10n %}
 <div class="container-fluid">
 
   <!-- Page Heading -->
@@ -45,7 +46,7 @@
           </tbody>
         </table>
 
-        <h2 style="float:right;">Saldo Rp:  {{saldototal}} </h2>
+        <h2 style="float:right;">Saldo Rp:  {% localize on %} {{saldototal}} {% endlocalize %}</h2>
       </div>
     </div>
   </div>

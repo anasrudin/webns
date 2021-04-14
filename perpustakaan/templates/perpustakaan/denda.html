@@ -1,6 +1,7 @@
 {% extends "admin.html" %}
 {% load static %}
 {% block content %}
+{% load l10n %}
 
 <div class="container-fluid">
 
@@ -48,6 +49,7 @@
             {% endfor %}
           </tbody>
         </table>
+        <h3 style="float:right;">Total Denda Rp:  {% localize on %} {{jumlahdenda}} {% endlocalize %}</h3>
       </div>
     </div>
   </div>
