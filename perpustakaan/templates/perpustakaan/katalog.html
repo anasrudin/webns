@@ -36,6 +36,7 @@
               <td>                
 
                 <a class="btn btn-danger btn-circle" href="{% url 'perpustakaan:deleteBuku' posting.id %}" title="Delete"><i class="fas fa-trash"></i></a>
+                <a class="btn btn-warning btn-circle" href="{% url 'perpustakaan:updateBuku' posting.id %}" title="Update"><i class="fas fa-edit"></i></a>
 </td>
               </tr>
             {% endfor %}

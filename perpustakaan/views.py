@@ -163,6 +163,40 @@ def updatePinjam(request, id):
 
 
 
+@login_required(login_url='/login/')
+def updateBuku(request, id):
+	instanceModel1 = get_object_or_404(Buku, id=id)
+	formInput = BukuForm(request.POST or None, instance=instanceModel1)
+	if formInput.is_valid():
+		profile1 = formInput.save(commit=False)
+		profile1.save()
+		messages.success(request, f"Success")
+		return redirect('perpustakaan:katalogPeminjaman')
+
+	return render(request, 'perpustakaan/kembali.html', {'formInput':formInput})
+
+
+# @login_required(login_url='/login/')
+# def tambahbuku(request):
+# 	formInput = BukuForm(request.POST or None)
+# 	if request.method == 'POST':
+# 		if formInput.is_valid():
+# 			formInput.save()
+# 			messages.success(request, 'Data Pinjam berhasil dibuat')
+# 		return redirect('perpustakaan:katalogPeminjaman')
+
+
+# 	context = {
+# 		'page_title':'tambahbuku Buku',
+# 		'nbar': 'tambahbuku',
+# 		'formInput':formInput,
+# 	}
+# 	return render(request, 'perpustakaan/kembali.html', context)
+
+
+
+
+
 
 
 
