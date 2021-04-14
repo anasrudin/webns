@@ -12,5 +12,7 @@ urlpatterns = [
     path('daftarTransaksi/', views.daftarTransaksi, name='daftarTransaksi'),
     path('daftarInfaq/', views.daftarInfaq, name='daftarInfaq'),
     # path('deleteTransaksi/', views.deleteTransaksi, name='deleteTransaksi'),
+    url(r'^updateTransaksi/(?P<id>[0-9]+)$', views.updateTransaksi, name='updateTransaksi'),
+    url(r'^updateInfaq/(?P<id>[0-9]+)$', views.updateInfaq, name='updateInfaq'),
     url(r'^deleteTransaksi/(?P<id>[0-9]+)$', views.deleteTransaksi, name='deleteTransaksi'),
 ]

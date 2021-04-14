@@ -12,6 +12,10 @@ from .models import Kas
 
 from django.db.models import Sum
 
+
+
+from django.shortcuts import get_list_or_404, get_object_or_404
+
 # Create your views here.
 @login_required(login_url='/login/')
 def index(request):
@@ -103,3 +107,35 @@ def deleteTransaksi(request,id):
     Kas.objects.filter(id=id).delete()
     messages.success(request, 'Data Transaksi berhasil didelete')
     return redirect('keuangan:daftarTransaksi')
+
+
+
+@login_required(login_url='/login/')
+def updateTransaksi(request,id):
+	instanceModel1 = get_object_or_404(Kas, id=id)
+	formInput = KasForm(request.POST or None, instance=instanceModel1)
+	if formInput.is_valid():
+		profile1 = formInput.save(commit=False)
+		profile1.save()
+		messages.success(request, f"Success")
+		return redirect('keuangan:daftarTransaksi')
+
+	return render(request, 'keuangan/inputTransaksi.html', {'formInput':formInput})
+
+
+
+
+
+@login_required(login_url='/login/')
+def updateInfaq(request,id):
+	instanceModel1 = get_object_or_404(Kas, id=id)
+	formInput = KasForm(request.POST or None, instance=instanceModel1)
+	if formInput.is_valid():
+		profile1 = formInput.save(commit=False)
+		profile1.save()
+		messages.success(request, f"Success")
+		return redirect('keuangan:daftarInfaq')
+
+	return render(request, 'keuangan/inputTransaksi.html', {'formInput':formInput})
+
+
